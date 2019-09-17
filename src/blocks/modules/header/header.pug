@@ -1,0 +1,27 @@
+include ../../components/UN-Bold-42-48-10-white/UN-Bold-42-48-10-white
+include ../../components/UN-Book-24-white/UN-Book-24-white
+include ../../components/blue-btn/blue-btn
+
+- var path1 = 'img/general/bg-header-women-full.webp';
+- var path2 = 'img/general/bg-header-women-full.png';
+- var path3 = 'img/general/logo-pravo-i-tehnologii-white1_mobile@1x.webp';
+- var path4 = 'img/general/logo-pravo-i-tehnologii-white1_mobile@1x.webp';
+
+header.header
+  picture.header__bg-pic
+    source(srcset="img/general/empty.png" media="(max-width: 768px)" type="image/webp")
+    source(srcset="img/general/empty.png" media="(max-width: 768px)" type="image/jpg")
+    source(srcset=`${path1}`, type="image/webp")
+    img.header__bg-img(src=`${path2}` alt="Право и Технологии")
+  .container.header__cont
+    include ../top-line/top-line
+    +UN-Bold-42-48-10-white('Встанем на вашу сторону <br />и поможем добиться <br />справедливости при разводе', 'header__par-1')
+    +UN-Book-24-white('либо поможем уладить конфликт не доводя до развода', 'header__par-2')
+    .header__header-notice
+      include ../header-notice/header-notice
+    .header__par-3 — В бракоразводных процессах <b>важно как можно быстрее</b> 
+      | оценить текущую ситуацию и составить первоначальный 
+      | план действий - это повышает вероятность позитивного 
+      | исхода вдвое.
+    .header__blue-btn
+      +blue-btn('header-btn', 'Оценить перспективы', 'и получить план действий')

@@ -1,0 +1,10 @@
+.UN-Book-24-white {
+  font-family: "UniNeueBook", sans-serif;
+  font-size: 24px;
+  color: $white;
+
+  @include breakpoint(mobile-m) {
+    font-size: 18px;
+    text-align: center;
+  }
+}

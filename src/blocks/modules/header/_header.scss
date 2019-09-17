@@ -1,0 +1,124 @@
+.header {
+  box-sizing: border-box;
+  background-position: top center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  // min-height: 884px;
+  padding-bottom: 96px;
+
+  @include breakpoint(contSize) {
+    padding-bottom: 45px;
+  }
+
+  &__par-1 {
+    margin-top: 88px;
+    margin-bottom: 22px;
+
+    @include breakpoint(tablet) {
+      margin-top: 50px;
+    }
+
+    @include breakpoint(mobile-m) {
+      margin-top: 34px;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__par-2 {
+    margin-bottom: 42px;
+    
+    @include breakpoint(mobile-m) {
+      margin-bottom: 38px;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__par-3 {
+    font-family: "UniNeueBook", sans-serif;
+    font-size: 17px;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+    color: $white;
+    max-width: 465px;
+
+    b {
+      font-family: "UniNeueHeavy", sans-serif;
+    }
+    margin-bottom: 22px;
+
+    @include breakpoint(mobile-m) {
+      font-size: 14px;
+      line-height: 20px;
+      max-width: 100%;
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__header-notice {
+    max-width: 364px;
+    margin-bottom: 56px;
+
+    @include breakpoint(mobile-m) {
+      max-width: 100%;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__blue-btn .blue-btn {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // &__blue-btn {
+  //   @include breakpoint(mobile-m) {
+  //     width: 100%;
+  //   }
+  // }
+  position: relative;
+  &__bg {
+    z-index: 0;
+
+    &-pic {
+      position: absolute;
+      z-index: 0;
+      right: 0;
+      bottom: 0;
+      width: 57%;
+
+      @include breakpoint(contSize) {
+        width: 60%;
+      }
+
+      @include breakpoint(laptop) {
+        width: 50%;
+      }
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__cont {
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.webp .header {
+  background-image: url("../img/general/bg-header-full.webp");
+
+  @include breakpoint(mobile-m) {
+    background-image: url("../img/general/bg-header-mobile@x2.webp");
+  }
+}
+
+.no-webp .header {
+  background-image: url("../img/general/bg-header-full.jpg");
+
+  @include breakpoint(mobile-m) {
+    background-image: url("../img/general/bg-header-mobile@x1.jpeg");
+  }
+}

@@ -1,0 +1,37 @@
+$white: #fff;
+$black: #000;
+$waterloo: #7e819a;
+$cornflower-blue: #5088e5;
+$mariner: #2555de;
+
+$blue-grad: linear-gradient(0deg, rgba(17, 57, 169, 1) 0%, rgba(50, 103, 253, 1) 100%), rgb(17, 57, 169);
+
+// BREAKPOINTS
+$mobile-m: 375px;
+$mobile-l: 480px;
+$mobile-xl: 576px;
+$tablet: 768px;
+$laptop: 1024px;
+$contSize: 1110px;
+
+@mixin breakpoint($point) {
+  @if $point == contSize {
+    @media (max-width: $contSize) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (max-width: $laptop) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (max-width: $tablet) { @content ; }
+  }
+  @else if $point == mobile-xl {
+    @media (max-width: $mobile-xl)  { @content ; }
+  }
+  @else if $point == mobile-l {
+    @media (max-width: $mobile-l)  { @content ; }
+  }
+  @else if $point == mobile-m {
+    @media (max-width: $mobile-m)  { @content ; }
+      
+  }
+}

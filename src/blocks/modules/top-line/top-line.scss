@@ -1,0 +1,111 @@
+.top-line {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+
+  @include breakpoint(laptop) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @include breakpoint(mobile-xl) {
+    padding-top: 20px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-block {
+    @include breakpoint(mobile-xl) {
+      padding-left: 13px;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__picture {
+    width: 152px;
+    margin-right: 18px;
+
+    @include breakpoint(mobile-m) {
+      width: 140px;
+      margin-right: 18px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__mail-link {
+    margin-left: auto;
+    margin-right: 46px;
+    color: $cornflower-blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include breakpoint(mobile-xl) {
+      display: none;
+    } 
+  }
+
+  &__phone-link {
+    @include breakpoint(mobile-xl) {
+      font-size: 18px;
+      margin-right: 0px;
+      margin-bottom: 19px;
+    }
+
+    font-family: "UniNeueBold", sans-serif;
+    color: $white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 20px;
+
+  }
+
+  &__logo-descr {
+    font-family: "UniNeueRegular", sans-serif;
+    color: $waterloo;
+    font-size: 13px;
+
+    @include breakpoint(mobile-m) {
+    }
+  }
+
+  &__get-consult {
+    cursor: pointer;
+    font-family: "UniNeueBold", sans-serif;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 1px solid rgba(37, 85, 222, 1);
+    padding: 21px 21px;
+    border-radius: 6px;
+    letter-spacing: 0.22px;
+    text-shadow: 0px 1px 0px rgba(18, 60, 160, 1);
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include breakpoint(laptop) {
+      // margin: 0 auto;
+    }
+    
+    @include breakpoint(mobile-m) {
+      cursor: pointer;
+      color: $mariner;
+      border: none;
+      padding: 0;
+      letter-spacing: normal;
+      text-shadow: none;
+    }
+    
+  }
+}
