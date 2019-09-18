@@ -4,3 +4,7 @@ mixin blue-btn(id, text1, text2)
       .blue-btn__inner
         span.blue-btn__top-text #{text1}
         span.blue-btn__bottom-text #{text2}
+  else
+    button(id=""+id).blue-btn
+      .blue-btn__inner
+        span.blue-btn__top-text #{text1}

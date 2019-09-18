@@ -1,0 +1,14 @@
+.what-situation {
+  padding-top: 72px;
+  padding-bottom: 80px;
+
+  &__cases {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+  }
+
+  &__case {
+    width: 350px;
+  }
+}

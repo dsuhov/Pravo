@@ -1,0 +1,72 @@
+.case {
+
+  &__subtext {
+    font-family: "UniNeueRegular", sans-serif;
+    padding: 0 16px;
+  }
+
+  &__decor-text {
+    font-family: "UniNeueHeavy", sans-serif;
+    background: linear-gradient(to top, rgba($malibu, 0.3) 0%, rgba($malibu, 0.3) 100%);
+    background-repeat: no-repeat;
+    background-position: 0 16px;
+  }
+
+  &__pic {
+    position: absolute;
+    top: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &.case__pic {
+      &--1 {
+        width: 210px;
+      }
+    }
+  }
+
+  &__text {
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    margin-bottom: 36px;
+  }
+
+  &__paragraph:not(:last-child) {
+    margin-bottom: 26px;
+  }
+
+  &__top, &__bottom {
+    background-color: $white;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      box-shadow: 0px 2px 28px 0px rgba(30, 54, 94, 0.15);
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+
+  &__top {
+    padding: 154px 30px 10px;
+
+    font-size: 19px;
+    line-height: 28px;
+    text-align: center;
+
+    border-radius: 6px 6px 0 0;
+  }
+
+  &__bottom {
+    padding: 8px 30px 30px;
+    border-radius: 0 0 6px 6px;
+  }
+
+  @import "case__delimeter";
+}

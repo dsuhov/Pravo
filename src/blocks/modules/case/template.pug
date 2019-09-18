@@ -1,0 +1,19 @@
+include ../../components/blue-btn/blue-btn-hover
+
+block variables
+
+.case
+  .case__top
+    picture(class="case__pic--"+order).case__pic
+      source(srcset=`${imgPlaceholder}` type="image/webp" data-srcset=`${imagePath_webp}`)
+      img.header__bg-img(src=`${imgPlaceholder}` data-src=`${imagePath}` alt="Декоративное изображение")
+    .case__subtext!= subtext
+  .case__delimeter
+  .case__delimeter.case__delimeter--bottom
+    .case__delimeter-line
+  .case__bottom
+    .case__text
+      each val in paragrahps
+        p.case__paragraph= val
+    .case__btn
+      +blue-btn-hover('case__btn--item-1', `${btnText}`)
