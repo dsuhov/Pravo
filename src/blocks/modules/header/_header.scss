@@ -3,7 +3,7 @@
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  // min-height: 884px;
+  background-color: #292a34;
   padding-bottom: 96px;
 
   @include breakpoint(contSize) {
@@ -71,11 +71,6 @@
     }
   }
 
-  // &__blue-btn {
-  //   @include breakpoint(mobile-m) {
-  //     width: 100%;
-  //   }
-  // }
   position: relative;
   &__bg {
     z-index: 0;
@@ -108,6 +103,7 @@
 }
 
 .webp .header {
+  
   background-image: url("../img/general/bg-header-full.webp");
 
   @include breakpoint(mobile-m) {

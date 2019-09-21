@@ -1,0 +1,30 @@
+.ctrl-arrow {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 38px;
+  height: 38px;
+  background: $blue-grad;
+  border-radius: 50%;
+
+  &__icon {
+    fill: $white;
+    width: 6px;
+    height: 13px;
+  }
+
+  &__icon.ctrl-arrow__icon--left {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}

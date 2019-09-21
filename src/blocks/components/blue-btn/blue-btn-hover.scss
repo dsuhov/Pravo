@@ -2,7 +2,11 @@
   display: block;
   position: relative;
   width: 100%;
-  padding: 24px 0;
+  padding: 22px 0 26px 0;
+
+  @include breakpoint (mobile-l) {
+    padding: 20px 0;
+  }
 
   .case:hover &__grey {
     opacity: 0;
@@ -72,5 +76,7 @@
     font-size: 15px;
     line-height: 26px;
     color: $mariner;
+
+    
   }
 }

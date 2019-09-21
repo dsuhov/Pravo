@@ -1,0 +1,187 @@
+.two-persons {
+  min-height: 939px;
+  padding-top: 72px;
+
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__header {
+    margin-bottom: 26px;
+  }
+
+  &__subheader {
+    margin-bottom: 66px;
+  }
+
+  &__blocks {
+    position: relative;
+    min-height: 700px;
+
+    &-inner {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;      
+    }
+  }
+
+  &__block {
+  }
+
+  &__women-1, &__women-2 {
+    position: relative;
+    flex-basis: 100%;
+    width: 32%;
+  }
+
+  &__top-block {
+    width: 36%;
+  }
+
+  &__bottom-block {
+    width: 36%;
+    
+  }
+
+  /* TEXT STYLES */
+  &__top-text {
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 45px;
+    padding-top: 30px;
+
+    font-family: "UniNeueBook", sans-serif;
+
+    b {
+      font-family: "UniNeueBold", sans-serif;
+    }
+
+    line-height: 26px;
+
+    &::before {
+      content: "\201C";
+      position: absolute;
+      top: 36px;
+      left: 6px;
+      font-family: "YesevaOne", serif;
+      font-size: 80px;
+      color: $blue-ribbon;
+    }
+  }
+
+  &__bb-text {
+    position: relative;
+    padding-top: 69px;
+    padding-left: 72px;
+    letter-spacing: 0.01em;
+
+    font-family: "UniNeueBook", sans-serif;
+
+    b {
+      font-family: "UniNeueBold", sans-serif;
+    }
+
+    line-height: 22px;
+
+    &:last-child {
+      padding-top: 32px;
+    }
+  }
+
+  &__decorated2 {
+    background: linear-gradient(to top, rgba($malibu, 0.3) 0%, rgba($malibu, 0.3) 100%);
+    background-repeat: no-repeat;
+    background-position: 0px 10px;
+    background-size: auto 12px;
+  }
+
+  &__decorated {
+    background: linear-gradient(to top, rgba($malibu, 0.3) 0%, rgba($malibu, 0.3) 100%);
+    background-repeat: no-repeat;
+    background-position: 0px 29px;
+    background-size: auto 12px;
+  }
+  /* TEXT STYLES  END*/
+
+  &__bb-icon {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    background: $blue-grad;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  &__bb-icon.two-persons__bb-icon--blank {
+    top: 76px;
+    padding-top: 12px;
+    padding-left: 16px;
+
+    .icon-blank {
+      fill: $white;
+      width: 20px;
+      height: 27px;
+    }
+  }
+
+  &__bb-icon.two-persons__bb-icon--hammer {
+    top: 52px;
+    padding-top: 10px;
+    padding-left: 14px;
+
+    .icon-hammer {
+      fill: $white;
+      width: 27px;
+      height: 27px;
+    }
+  }
+  
+
+  &__women-btn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+  }
+
+  &__women-1 &__picture {
+    z-index: 0;
+    position: absolute;
+    bottom: calc(100% - 90px);
+    left: 22px;
+    width: 408px;
+  }
+
+  &__women-2 &__picture {
+    z-index: 0;
+    position: absolute;
+    bottom: calc(100% - 150px);
+    left: 4px;
+    width: 396px;
+  }
+}
+
+.webp .two-persons {
+  
+  background-image: url("../img/general/two-persons-block_bg_desktop.webp");
+
+  // @include breakpoint(mobile-m) {
+  //   background-image: url("../img/general/bg-header-mobile@x2.webp");
+  // }
+}
+
+.no-webp .two-persons {
+  background-image: url("../img/general/two-persons-block_bg_desktop.jpg");
+
+  // @include breakpoint(mobile-m) {
+  //   background-image: url("../img/general/bg-header-mobile@x1.jpeg");
+  // }
+}

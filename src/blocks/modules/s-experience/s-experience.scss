@@ -1,0 +1,125 @@
+.s-experience {
+  background-color: $polar;
+  padding-top: 70px;
+  padding-bottom: 122px;
+
+  
+
+  &__header {
+    margin-bottom: 28px;
+  }
+
+  &__subheader {
+    margin-bottom: 102px;
+  }
+
+  &__experience-item {
+    width: 255px;
+  }
+
+  &__experience-item:not(:last-child) {
+    margin-bottom: 42px;
+  }
+
+  &__lcol, &__rcol {
+    position: relative;
+    z-index: 50;
+  }
+
+  &__cols {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 50;
+  }
+
+  &__center-col {
+    z-index: 0;
+    position: absolute;
+    padding-top: 54px;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__picture {
+    position: relative;
+    z-index: 10;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 885px;
+      height: 898px;
+      background: radial-gradient(circle, rgba(126,151,233,1) 0%, transparent 50%);
+      background-position: center;
+      background-repeat: no-repeat;
+
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+  }
+
+  &__decor-cont {
+    position: relative;
+    max-width: 586px;
+    margin: 0 auto;
+    z-index: 5;
+    right: 15px;
+    // padding-right: 30px;
+  }
+
+  &__rounds {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    opacity: 0.7;
+  }
+
+  &__rounds-inner, &__rounds::before, &__rounds::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    border: 1px solid #b4cdef;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  &__rounds::before {
+    animation: rounds 2.4s linear infinite;
+  }
+
+  &__rounds::after {
+    animation: rounds 2.4s linear infinite 0.8s;
+  }
+
+  &__rounds &__rounds-inner {
+    animation: rounds 2.4s linear infinite 1.6s;
+  }
+}
+
+@keyframes rounds {
+	0% {
+		width: 400px;
+		height: 400px;
+		opacity: 0;
+	}
+	5% {
+		opacity: .5;
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		width: 700px;
+		height: 700px;
+		opacity: 0;
+	}
+}

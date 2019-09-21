@@ -1,14 +1,89 @@
 .what-situation {
-  padding-top: 72px;
+  padding-top: 70px;
   padding-bottom: 80px;
 
+  &__title {
+    margin-bottom: 106px;
+  }
+
+  &__cases-wrapper {
+    position: relative;
+    
+    @include breakpoint (contSize) {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include breakpoint (tablet) {
+      max-width: 480px;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 320px;
+    right: 0;
+    z-index: 10;
+    display: none;
+
+    &.what-situation__arrow--left {
+      left: 0;
+    }
+
+    @include breakpoint (contSize) {
+      display: flex;
+    }
+
+    @include breakpoint (mobile-l) {
+      top: 288px;
+      right: 2px;
+      z-index: 10;
+  
+      &.what-situation__arrow--left {
+        left: 2px;
+      }
+    }
+  }
+
   &__cases {
+
     display: flex;
     justify-content: space-between;
-    padding-top: 100px;
+    // padding-top: 100px;
+
+    @include breakpoint (contSize) {
+      display: block;
+    }
+
+    @include breakpoint (mobile-l) {
+      & * {
+        // overflow: visible;
+      }
+    }
   }
 
   &__case {
     width: 350px;
+
+    @include breakpoint (contSize) {
+      padding-top: 53px;
+      padding-bottom: 30px;
+    }
+
+    @include breakpoint (mobile-l) {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0 25px;
+      padding-top: 53px;
+      padding-bottom: 30px;
+    }
+  }
+
+  @include breakpoint (mobile-l) {
+    .container {
+      padding: 0;
+    }
   }
 }
+

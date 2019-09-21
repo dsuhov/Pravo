@@ -1,0 +1,8 @@
+mixin experience-item(expCase, expDuration, extraClass)
+  .experience-item(class=`${extraClass}__experience-item`)
+    .experience-item__inner
+      h3.experience-item__circumscribing #{expCase}
+      .experience-item__practice Практический опыт: 
+        span.experience-item__practice-years #{expDuration}
+      .experience-item__icon
+        include ../../components/tick-icon/tick-icon

@@ -1,11 +1,17 @@
+include ../../components/ctrl-arrow/ctrl-arrow
+include ../../components/sect-header/sect-header
+
 .what-situation
   .container
-    h2.what-situation__title
+    .what-situation__title
+      +sect-header('В какой ситуации вы сейчас находитесь?')
     .what-situation__cases-wrapper
+      +ctrl-arrow('left', 'what-situation')
+      +ctrl-arrow('right', 'what-situation')
       .what-situation__cases
         .what-situation__case
           include ../case/case-1
         .what-situation__case
-          include ../case/case-1
+          include ../case/case-2
         .what-situation__case
-          include ../case/case-1
+          include ../case/case-3
