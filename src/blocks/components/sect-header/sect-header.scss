@@ -3,4 +3,16 @@
   font-size: 34px;
   line-height: 42px;
   text-align: center;
+
+  @include breakpoint(mobile-xl) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  &__decorated {
+    background: linear-gradient(to top, rgba(94, 189, 255, 0.3) 0%, rgba(94, 189, 255, 0.3) 100%);
+    background-repeat: no-repeat;
+    background-position: 0px 0.85em;
+    background-size: auto 0.4em;
+  }
 }

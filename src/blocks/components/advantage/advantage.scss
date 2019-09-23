@@ -1,0 +1,20 @@
+.advantage {
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
+  padding-top: 56px;
+  font-family: "UniNeueLight", sans-serif;
+  color: $white;
+
+  b {
+    font-family: "UniNeueHeavy", sans-serif;
+  }
+
+  &__tick-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+}

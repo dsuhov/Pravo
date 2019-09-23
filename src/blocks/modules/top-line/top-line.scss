@@ -107,5 +107,8 @@
       text-shadow: none;
     }
     
+    &:hover {
+      background: linear-gradient(0deg, rgba(17,57,169,1) 0%,   rgba(50,103,253,1) 100%);
+    }
   }
 }

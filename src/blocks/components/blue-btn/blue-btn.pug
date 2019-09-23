@@ -1,4 +1,4 @@
-mixin blue-btn(id, text1, text2)
+mixin blue-btn(id, text1, text2, extraClass)
   if text2
     button(id=""+id).blue-btn
       .blue-btn__inner
@@ -6,5 +6,5 @@ mixin blue-btn(id, text1, text2)
         span.blue-btn__bottom-text #{text2}
   else
     button(id=""+id).blue-btn
-      .blue-btn__inner
+      .blue-btn__inner(class=""+extraClass)
         span.blue-btn__top-text #{text1}

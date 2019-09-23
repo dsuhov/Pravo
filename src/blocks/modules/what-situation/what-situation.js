@@ -25,7 +25,7 @@ function activateCasesSlider(cont) {
     
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
           arrows: false,
           // centerPadding: '40px',

@@ -1,0 +1,46 @@
+.choose-msngr {
+  box-sizing: border-box;
+  display: flex;
+  border: 1px solid $mariner;
+  
+  border-radius: 6px;
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+
+    font-family: "UniNeueBook", sans-serif;
+    font-size: 13px;
+    line-height: 28px;
+    color: $mako;
+    padding: 2px 0;
+    transition: all 0.2s;
+    
+    &:not(:last-child) {
+      border-right: 1px solid $mariner;
+    }
+
+    svg {
+      fill: $mariner;
+      margin-right: 5px;
+    }
+  }
+  
+  &__input:checked + &__label {
+    background: $mariner;
+    color: $white;
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  @import "svgs";
+}

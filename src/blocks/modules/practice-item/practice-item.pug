@@ -1,0 +1,25 @@
+block variables
+
+.practice-item
+  h3.practice-item__title!= piItemTitle
+  .practice-item__descr-block
+    .practice-item__descr
+      .practice-item__descr-header Ситуация:
+      .practice-item__descr-text!= situationText
+      .practice-item__descr-more Читать полностью...
+    .practice-item__descr
+      .practice-item__descr-header Что мы сделали:
+      .practice-item__descr-text!= whatWeDidText
+      .practice-item__descr-more Читать полностью...
+  .practice-item__delimeter
+  .practice-item__bottom-block
+    .practice-item__result-header Результат:
+    .practice-item__result-text!= resultText
+    .practice-item__doer
+      picture.practice-item__doer-photo
+        //- source(srcset=`${placeholder1_mobile}`, data-srcset=`${webpImg_mobile}, ${webpImg} 2x` type="image/webp" media="(max-width: 1024px)")
+        source(srcset=`${imgDummyDesk}` data-srcset=`${imgWebp}` type="image/webp")
+        img.header__bg-img(src=`${imgDummyDesk}` data-src=`${imgPng}` alt="Юлия Ковалева")
+      .practice-item__doer-info
+        .practice-item__doer-header Дело вела
+        .practice-item__doer-name= doerName

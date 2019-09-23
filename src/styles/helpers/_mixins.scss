@@ -1,8 +1,25 @@
-
-
 @mixin placeholder {
   &::-webkit-input-placeholder {@content}
   &:-moz-placeholder           {@content}
   &::-moz-placeholder          {@content}
   &:-ms-input-placeholder      {@content}
+}
+
+@mixin bottom-plank($height, $radius) {
+  position: relative;
+  z-index: 5;
+
+  .plank {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -$height;
+    width: 96.8%;
+    height: $height;
+    background: $white;
+    border-radius: 0 0 $radius $radius;
+    z-index: 0;
+    background: linear-gradient(0deg, rgba(212,216,224,1) 0%, rgba(234,236,240,1) 100%);
+    box-shadow: 0px 21px 17px 0px rgba(16, 31, 57, 0.6);
+  }
 }

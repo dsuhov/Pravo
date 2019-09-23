@@ -21,7 +21,7 @@ $offset_sm_one_side: ($offset_sm / 2);
 $offset_es_one_side: ($offset_es / 2);
 $offset_xs_one_side: ($offset_xs / 2);
 
-$fields: 10px;
+$fields: 15px;
 
 @mixin container-full(){
     padding-left: $fields;

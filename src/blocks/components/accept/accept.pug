@@ -1,0 +1,7 @@
+mixin accept(id, extraClass)
+  .accept(class=""+extraClass)
+    input(type="checkbox" id=`accept-riles-${id}`).accept__input
+    label(for=`accept-riles-${id}`).accept__label Согласен с <u>Политикой конфиденциальности сайта</u>
+      .accept__checkbox
+        svg(class="accept__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 6")
+          path(d="M7.9.1c-.2-.1-.4-.1-.6 0L2.5 5 .7 3.1C.5 3 .3 3 .1 3.1c-.1.2-.1.4 0 .6l2.1 2.2c.2.1.5.1.6 0L7.9.7c.1-.2.1-.4 0-.6z")

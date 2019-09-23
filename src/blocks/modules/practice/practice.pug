@@ -1,0 +1,16 @@
+include ../../components/sect-header/sect-header
+include ../../components/sect-subheader/sect-subheader
+
+.practice
+  .practice__header
+    +sect-header('Наш профессионализм подтверждается практикой')
+  .practice__subheader
+    +sect-subheader('Мы не размещаем отзывы и реальные имена заказчиков т.к. гарантируем им полную конфиденциальность.')
+  .practice__slider-container
+    .practice__slider
+      .practice__slider-item
+        include ../practice-item/practice-item-1
+      .practice__slider-item
+        include ../practice-item/practice-item-1
+      .practice__slider-item
+        include ../practice-item/practice-item-1

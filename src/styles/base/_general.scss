@@ -40,8 +40,20 @@ button {
   }
 }
 
+.text-back {
+  background: linear-gradient(to top, rgba(94, 189, 255, 0.3) 0%, rgba(94, 189, 255, 0.3) 100%);
+  background-repeat: no-repeat;
+  background-position: 0px 0.75em;
+  background-size: auto 0.52em;
+}
+
 .container {
   @include container();
+
+  @include breakpoint(laptop) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   // @include sm(max-width, rem(510));
   // @include md(max-width, rem(690));
   // @include lg(max-width, rem(930));

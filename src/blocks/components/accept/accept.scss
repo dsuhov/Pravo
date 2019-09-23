@@ -1,0 +1,49 @@
+.accept {
+
+  &__checkbox {
+    cursor: pointer;
+    box-sizing: border-box;
+    padding-top: 4px;
+    padding-left: 3px;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background: $catskill-white;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0 rgba(102, 145, 210, 0.3) inset;
+  }
+
+  &__svg {
+    display: none;
+    width: 8px;
+    height: 5px;
+    fill: $black;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    padding-left: 24px;
+    box-sizing: border-box;
+
+    font-family: "UniNeueBook", sans-serif;
+    font-size: 13px;
+    line-height: 28px;
+    color: $regent-gray;
+
+    u {
+      text-decoration: none;
+      border-bottom: 1px solid $regent-gray;
+    }
+  }
+
+  &__input:checked + &__label &__svg {
+    display: block;
+  }
+}

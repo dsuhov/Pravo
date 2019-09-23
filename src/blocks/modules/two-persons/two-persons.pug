@@ -5,6 +5,13 @@
 - var webpImg = 'img/general/two-persons-block_women-1_desktop.webp';
 - var webpImg2 = 'img/general/two-persons-block_women-2_desktop.webp';
 
+- var placeholder1_mobile = 'data:image/gif;base64,R0lGODlhZwCgAIAAAP///wAAACH5BAEAAAEALAAAAABnAKAAAAKcjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ub21AAADs=';
+- var placeholder2_mobile = 'data:image/gif;base64,R0lGODlhKABDAIAAAP///wAAACH5BAEAAAEALAAAAAAoAEMAAAI1jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpdMXAEAOw==';
+- var fallbackImg_mobile = 'img/general/two-persons-block_women-1_mobile.png';
+- var fallbackImg2_mobile = 'img/general/two-persons-block_women-2_mobile.png';
+- var webpImg_mobile = 'img/general/two-persons-block_women-1_mobile.webp';
+- var webpImg2_mobile = 'img/general/two-persons-block_women-2_mobile.webp';
+
 include ../../components/women-btn/women-btn
 include ../../components/sect-header/sect-header
 include ../../components/sect-subheader/sect-subheader
@@ -12,17 +19,18 @@ include ../../components/sect-subheader/sect-subheader
 .two-persons
   .container
     .two-persons__header
-      +sect-header('Вас будут защищать юристы <br />с практическим <span class="two-persons__decorated">опытом более 15 лет</span>')
+      +sect-header('Вас будут защищать юристы <br />с практическим <span class="sect-header__decorated">опытом более 15 лет</span>')
     .two-persons__subheader
-      +sect-subheader('Мы провели более <span class="two-persons__decorated2">100 бракоразводных процессов</span> и знаем все тонкости')
+      +sect-subheader('Мы провели более <span class="sect-subheader__decorated">100 бракоразводных процессов</span> и знаем все тонкости')
     .two-persons__blocks
       .two-persons__blocks-inner
         .two-persons__block.two-persons__women-1
           .two-persons__women-btn
             +women-btn('Юлия Ковалева', '77/12564')
             picture.two-persons__picture
+              source(srcset=`${placeholder1_mobile}`, data-srcset=`${webpImg_mobile}, ${webpImg} 2x` type="image/webp" media="(max-width: 1024px)")
               source(srcset=`${placeholder1}`, data-srcset=`${webpImg}` type="image/webp")
-              img.header__bg-img(src=`${placeholder1}` data-src=`${fallbackImg}` alt="Юлия Ковалева")
+              img.header__bg-img(src=`${placeholder1}` srcset=`${placeholder1_mobile} 2x` data-src=`${fallbackImg_mobile}` alt="Юлия Ковалева")
         .two-persons__block.two-persons__top-block
           p.two-persons__top-text Мы как хорошие и плохие полицейские из фильмов. <b>Можем действовать мягко, чтобы урегулировать конфликт мирным путем. Но если не получается, мы тут же становимся акулами</b>, которые не остановятся ни перед чем, лишь бы добиться справедливого результата для клиента.
         .two-persons__block.two-persons__bottom-block
@@ -36,5 +44,6 @@ include ../../components/sect-subheader/sect-subheader
           .two-persons__women-btn
             +women-btn('Инна Беляева', '77/12564')
             picture.two-persons__picture
+              source(srcset=`${placeholder2_mobile}`, data-srcset=`${webpImg2_mobile}, ${webpImg2} 2x` type="image/webp" media="(max-width: 1024px)")
               source(srcset=`${placeholder2}`, data-srcset=`${webpImg2}` type="image/webp")
-              img.header__bg-img(src=`${placeholder2}` data-src=`${fallbackImg2}` alt="Инна Беляева")
+              img.header__bg-img(src=`${placeholder2}` srcset=`${placeholder2_mobile} 2x` data-src=`${fallbackImg2_mobile}` alt="Инна Беляева")

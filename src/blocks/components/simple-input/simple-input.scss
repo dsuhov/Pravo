@@ -1,0 +1,27 @@
+.simple-input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 16px 10px 16px 30px;
+  outline: none;
+  border: none;
+  background: $catskill-white;
+  box-shadow: 0 0 10px 0 rgba(102, 145, 210, 0.3) inset;
+  border-radius: 6px;
+
+  font-family: "UniNeueRegular", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: $regent-gray;
+
+  @include placeholder() {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: rgba($regent-gray, 0.8);
+  }
+
+  &:focus {
+    box-shadow: 0 0 10px 0 rgba(129, 164, 216, 0.6) inset;
+  }
+}

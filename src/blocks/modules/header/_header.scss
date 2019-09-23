@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-color: #292a34;
   padding-bottom: 96px;
+  overflow: hidden;
 
   @include breakpoint(contSize) {
     padding-bottom: 45px;

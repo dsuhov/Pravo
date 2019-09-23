@@ -1,17 +1,42 @@
 .two-persons {
-  min-height: 939px;
   padding-top: 72px;
+
+  padding-bottom: 20px;
+    margin-bottom: -47px;
 
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
 
+  overflow: hidden;
+
+  @include breakpoint(contSize) {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(contSize) {
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
   &__header {
     margin-bottom: 26px;
+
+    @include breakpoint(mobile-m) {
+      margin-bottom: 12px;
+    }
   }
 
   &__subheader {
     margin-bottom: 66px;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 30px;
+    }
+
+    @include breakpoint(mobile-m) {
+      margin-bottom: 0;
+    }
   }
 
   &__blocks {
@@ -29,23 +54,130 @@
       width: 100%;
       height: 100%;      
     }
+
+    @include breakpoint(contSize) {
+      position: initial;
+      flex-direction: row;
+      min-height: auto;
+
+      &-inner {
+        @include row-flex();
+        flex-direction: row;
+        position: initial;
+        height: auto;
+        width: auto;
+        top: initial;
+        left: initial; 
+      }
+    }
+
+    @include breakpoint(laptop) {
+      width: 100%;
+    }
   }
 
   &__block {
+    @include breakpoint(contSize) {
+      
+    }
   }
 
   &__women-1, &__women-2 {
-    position: relative;
     flex-basis: 100%;
+    position: relative;
     width: 32%;
+
+    @include breakpoint(contSize) {
+      @include col();
+      @include size(5);
+
+      min-height: 700px;
+      flex-basis: auto;
+    }
+
+    @include breakpoint(laptop) {
+      min-height: auto;
+      padding-top: 335px;
+    }
+
+    @include breakpoint(tablet) {
+      @include size(6);
+    }
+
+    @include breakpoint(mobile-xl) {
+      @include size(12);
+    }
+
+    
+  }
+
+  // WOMEN POS
+  &__women-1 {
+    @include breakpoint(contSize) {
+      @include shift-left(1);
+    }
+
+    @include breakpoint(tablet) {
+      @include shift-left(0);
+    }
+
+    @include breakpoint(mobile-xl) {
+      padding-top: 320px;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__women-2 {
+    @include breakpoint(mobile-m) {
+      padding-top: 314px;
+    }
+  }
+  // WOMEN POS
+
+  @include breakpoint(contSize) {
+    &__women-1 { order: 1; }
+    &__women-2 { order: 2; }
+    &__top-block { order: 3; }
+    &__bottom-block { order: 4; }
+  }
+
+  @include breakpoint(mobile-xl) {
+    &__women-1 { order: 1; }
+    &__women-2 { order: 3; }
+    &__top-block { order: 2; }
+    &__bottom-block { order: 4; }
   }
 
   &__top-block {
     width: 36%;
+
+    @include breakpoint(contSize) {
+      @include col();
+      @include size(6);
+
+      padding-top: 30px;
+    }
+
+    @include breakpoint(mobile-xl) {
+      padding-top: 0;
+      @include size(12);
+    }
   }
 
   &__bottom-block {
     width: 36%;
+
+    @include breakpoint(contSize) {
+      @include col();
+      @include size(6);
+      
+      padding-top: 30px;
+    }
+
+    @include breakpoint(mobile-xl) {
+      @include size(12);
+    }
+    
     
   }
 
@@ -72,6 +204,30 @@
       font-family: "YesevaOne", serif;
       font-size: 80px;
       color: $blue-ribbon;
+
+      @include breakpoint(contSize) {
+        top: 10px;
+      }
+
+      @include breakpoint(tablet) {
+        font-size: 40px;
+        top: 6px;
+        left: 1px;
+      }
+    }
+
+    @include breakpoint(contSize) {
+      padding-top: 0;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 13px;
+      line-height: 22px;
+      padding-left: 26px;
+    }
+
+    @include breakpoint(mobile-m) {
+      padding-left: 20px;
     }
   }
 
@@ -92,20 +248,31 @@
     &:last-child {
       padding-top: 32px;
     }
-  }
 
-  &__decorated2 {
-    background: linear-gradient(to top, rgba($malibu, 0.3) 0%, rgba($malibu, 0.3) 100%);
-    background-repeat: no-repeat;
-    background-position: 0px 10px;
-    background-size: auto 12px;
-  }
+    @include breakpoint(contSize) {
+      padding-top: 0;
 
-  &__decorated {
-    background: linear-gradient(to top, rgba($malibu, 0.3) 0%, rgba($malibu, 0.3) 100%);
-    background-repeat: no-repeat;
-    background-position: 0px 29px;
-    background-size: auto 12px;
+      &:last-child {
+        padding-top: 0;
+      }
+
+      &:first-child {
+        margin-bottom: 30px;
+      }
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    @include breakpoint(mobile-m) {
+      padding-left: 65px;
+
+      &:first-child {
+        margin-bottom: 26px;
+      }
+    }
   }
   /* TEXT STYLES  END*/
 
@@ -130,6 +297,16 @@
       width: 20px;
       height: 27px;
     }
+
+    @include breakpoint(contSize) {
+      top: 10px;
+    }
+
+    @include breakpoint(mobile-m) {
+      top: 50%;
+      transform: translateY(-25px);
+      left: 3px;
+    }
   }
 
   &__bb-icon.two-persons__bb-icon--hammer {
@@ -142,6 +319,16 @@
       width: 27px;
       height: 27px;
     }
+
+    @include breakpoint(contSize) {
+      top: 10px;
+    }
+
+    @include breakpoint(mobile-m) {
+      top: 50%;
+      transform: translateY(-25px);
+      left: 3px;
+    }
   }
   
 
@@ -150,6 +337,11 @@
     bottom: 0;
     width: 100%;
     z-index: 5;
+
+    @include breakpoint(laptop) {
+      position: relative;
+      bottom: initial;
+    }
   }
 
   &__women-1 &__picture {
@@ -158,6 +350,16 @@
     bottom: calc(100% - 90px);
     left: 22px;
     width: 408px;
+
+    @include breakpoint(laptop) {
+      width: 206px;
+      bottom: calc(100% - 10px);
+    }
+
+    @include breakpoint(mobile-m) {
+      bottom: calc(100% - 25px);
+      left: 50px;
+    }
   }
 
   &__women-2 &__picture {
@@ -166,10 +368,23 @@
     bottom: calc(100% - 150px);
     left: 4px;
     width: 396px;
+
+    @include breakpoint(laptop) {
+      bottom: calc(100% - 40px);
+      left: initial;
+      right: 20px;
+      width: 200px;
+    }
+
+    @include breakpoint(mobile-m) {
+      bottom: calc(100% - 52px);
+      right: 48px;
+    }
   }
 }
 
 .webp .two-persons {
+  // background-color: aqua;
   
   background-image: url("../img/general/two-persons-block_bg_desktop.webp");
 

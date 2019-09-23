@@ -2,35 +2,95 @@
   background-color: $polar;
   padding-top: 70px;
   padding-bottom: 122px;
+  overflow: hidden;
 
-  
+  @include breakpoint(mobile-m) {
+    padding-top: 26px;
+    padding-bottom: 36px;
+  }
 
   &__header {
     margin-bottom: 28px;
+
+    @include breakpoint(mobile-m) {
+      margin-bottom: 15px;
+      padding: 0 10px;
+    }
   }
 
   &__subheader {
     margin-bottom: 102px;
+
+    @include breakpoint(mobile-m) {
+      margin-bottom: 45px;
+    }
   }
 
   &__experience-item {
     width: 255px;
+    
+    @include breakpoint(laptop) {
+      // width: 50%;
+      @include col;
+      @include size(4);
+    }
+
+    @include breakpoint(mobile-xl) {
+      &:not(:last-child) {
+        @include size(6);
+      }
+
+      &:last-child {
+        margin-top: 35px;
+        @include size(12);
+      }
+    }
+
+    @include breakpoint(mobile-l) {
+      &:not(:last-child) {
+        @include size(12);
+        margin-bottom: 30px;
+      }
+
+      &:last-child {
+        margin-top: 0;
+        @include size(12);
+      }
+    }
   }
 
   &__experience-item:not(:last-child) {
     margin-bottom: 42px;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 0;
+    }
+    
+    @include breakpoint(mobile-m) {
+      margin-bottom: 35px;
+    }
   }
 
   &__lcol, &__rcol {
     position: relative;
     z-index: 50;
+    
+    @include breakpoint(laptop) {
+      @include row-flex();
+    }
   }
 
   &__cols {
+    @include breakpoint(laptop) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
     position: relative;
     display: flex;
     justify-content: space-between;
     z-index: 50;
+
   }
 
   &__center-col {
@@ -40,6 +100,16 @@
     width: 100%;
     top: 0;
     left: 0;
+
+    @include breakpoint(laptop) {
+      position: initial;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    @include breakpoint(mobile-m) {
+      padding-top: 55px;
+      padding-bottom: 38px;
+    }
   }
 
   &__picture {
@@ -47,28 +117,50 @@
     z-index: 10;
 
     &::after {
-      position: absolute;
       content: "";
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
       width: 885px;
       height: 898px;
-      background: radial-gradient(circle, rgba(126,151,233,1) 0%, transparent 50%);
+      background: radial-gradient(circle, rgba(126, 151, 233, 1) 0%, transparent 50%);
       background-position: center;
       background-repeat: no-repeat;
-
-      left: 50%;
-      top: 50%;
       transform: translate(-50%, -50%);
-      z-index: -1;
+
+      @include breakpoint(contSize) {
+        width: 500px;
+        height: 500px;
+      }
+
+      @include breakpoint(mobile-xl) {
+        width: 400px;
+        height: 400px;
+      }
+
+      @include breakpoint(mobile-l) {
+        width: 300px;
+        height: 300px;
+      }
     }
   }
 
   &__decor-cont {
     position: relative;
-    max-width: 586px;
-    margin: 0 auto;
     z-index: 5;
     right: 15px;
-    // padding-right: 30px;
+    max-width: 586px;
+    margin: 0 auto;
+
+    @include breakpoint(laptop) {
+      max-width: 50%;
+      position: initial;
+    }
+
+    @include breakpoint(mobile-m) {
+      max-width: 300px;
+    }
   }
 
   &__rounds {
@@ -76,7 +168,6 @@
     z-index: 3;
     top: 50%;
     left: 50%;
-    z-index: 2;
     opacity: 0.7;
   }
 
@@ -92,34 +183,17 @@
     opacity: 0;
   }
 
-  &__rounds::before {
+  &__rounds.animated::before {
     animation: rounds 2.4s linear infinite;
   }
 
-  &__rounds::after {
+  &__rounds.animated::after {
     animation: rounds 2.4s linear infinite 0.8s;
   }
 
-  &__rounds &__rounds-inner {
+  &__rounds.animated &__rounds-inner {
     animation: rounds 2.4s linear infinite 1.6s;
   }
 }
 
-@keyframes rounds {
-	0% {
-		width: 400px;
-		height: 400px;
-		opacity: 0;
-	}
-	5% {
-		opacity: .5;
-	}
-	75% {
-		opacity: 1;
-	}
-	100% {
-		width: 700px;
-		height: 700px;
-		opacity: 0;
-	}
-}
+@import "rounds";

@@ -1,0 +1,18 @@
+mixin choose-msngr(idBase)
+  .choose-msngr(id="choose-msngr-"+idBase)
+    input(type="radio" id="choose-msngr-inp-phone"+idBase name="messenger-type" value="phone" data-val="Телефона" checked required).choose-msngr__input
+    label(for="choose-msngr-inp-phone"+idBase).choose-msngr__label
+      +icon('phone')
+      | Телефон
+    input(type="radio" id="choose-msngr-inp-viber"+idBase name="messenger-type" value="viber" data-val="Viber" required).choose-msngr__input
+    label(for="choose-msngr-inp-viber"+idBase).choose-msngr__label
+      +icon('viber')
+      | Viber
+    input(type="radio" id="choose-msngr-inp-WhatsApp"+idBase name="messenger-type" value="WhatsApp" data-val="WhatsApp" required).choose-msngr__input
+    label(for="choose-msngr-inp-WhatsApp"+idBase).choose-msngr__label
+      +icon('whatsApp')
+      | WhatsApp
+    input(type="radio" id="choose-msngr-inp-Telegram"+idBase name="messenger-type" value="Telegram" data-val="Telegram" required).choose-msngr__input
+    label(for="choose-msngr-inp-Telegram"+idBase).choose-msngr__label
+      +icon('telegram')
+      | Telegram

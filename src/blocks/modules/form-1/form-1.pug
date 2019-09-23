@@ -1,0 +1,41 @@
+include ../../components/advantage/advantage
+include ../../components/simple-input/simple-input
+include ../../components/choose-msngr/choose-msngr
+include ../../components/blue-btn/blue-btn-subm
+include ../../components/accept/accept
+
+- var plshldr = 'data:image/gif;base64,R0lGODlhKABDAIAAAP///wAAACH5BAEAAAEALAAAAAAoAEMAAAI1jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpdMXAEAOw==';
+
+.form-1
+  picture.form-1__picture
+    source(srcset=`${plshldr}`, data-srcset="img/general/hand-phone_desctop1.webp" type="image/webp")
+    img.header__bg-img(src=`${plshldr}` data-src="hand-phone_desctop1.png")
+  .container
+    .form-1__block
+      .plank
+      .form-1__row
+        .form-1__col.form-1__col-1
+          h3.form-1__title Получите честную оценку <br />перспектив
+          p.form-1__text Давайте свяжемся и обсудим вашу ситуацию. <br /><b class="text-back">По итогам разговора вы получите оценку <br />перспектив, а также первоначальный план <br />действий,</b> которые помогут добиться результата.
+          .form-1__notice
+            .form-1__notice-inner
+              img(src="", data-src="img/general/form-1-w1.png" alt="Смело оставляйте заявку!").form-1__notice-pic
+              p.form-1__notice-text Смело оставляйте заявку на консультацию! <br />Иногда для решения сложной проблемы <br />достаточно одного разговора с юристом!
+        .form-1__col.form-1__col-2
+          form.form-1__form(action="" method="post" id="form-1")
+            .form-1__input
+              +simple-input('Как вас зовут?', 'username', 'form-1-name')
+            .form-1__label Как вам удобно получить ответ?
+            .form-1__choose-msngr
+              +choose-msngr('1')
+            .form-1__input
+              +simple-input('Введите номер Телефона', 'number', 'form-1-messenger')
+            +blue-btn-subm('form-1__btn', 'Получить оценку перспектив', '', 'form-1__btn-p')
+            +accept('1', 'form-1__accept')
+    .form-1__advantages
+      .form-1__advantage
+        +advantage('Возьмем на себя все хлопоты, <br /><b>избавим вас от лишних встреч <br />с супругой(ом)</b> и походов в суд')
+      .form-1__advantage
+        +advantage('<b>Храним адвокатскую тайну.</b><br />Все, что вы нам скажете, останется тайной,<br />которую мы унесем с собой в могилу')
+      .form-1__advantage
+        +advantage('Прописываем стоимость услуг<br />в договоре. <b>Стоимость остается<br />неизменной до окончания дела')

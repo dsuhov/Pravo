@@ -1,5 +1,6 @@
 
 import LazyLoad from "vanilla-lazyload";
+// import "./import/jquery.visible.min.js";
 import "./import/modernizr-custom";
 import "./import/modules";
 import "./import/components";

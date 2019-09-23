@@ -1,9 +1,22 @@
 .what-situation {
   padding-top: 70px;
   padding-bottom: 80px;
+  overflow: hidden;
+
+  @include breakpoint(tablet) {
+    padding-top: 28px;
+  }
+
+  @include breakpoint(mobile-m) {
+    padding-bottom: 0;
+  }
 
   &__title {
     margin-bottom: 106px;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 8px;
+    }
   }
 
   &__cases-wrapper {
