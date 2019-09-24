@@ -1,0 +1,62 @@
+.milestone {
+  @include double-box();
+
+  &__inner {
+    position: relative;
+    z-index: 5;
+    padding: 42px 5px 28px 15px;
+  }
+
+  &__stage-label {
+    position: absolute;
+    z-index: 10;
+    top: -19px;
+    width: 133px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $blue-grad;
+
+    font-family: "UniNeueBold", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: $white;
+    padding: 8px 0;
+    border-radius: 6px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -80px;
+      left: 75px;
+      width: 238px;
+      height: 75px;
+      background: url('../img/general/arc-arrow.svg') no-repeat;
+    }
+  }
+
+  &__header, &__result-header {
+    font-family: "UniNeueBold", sans-serif;
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+
+  &__paragraph {
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__result-block {
+    padding-top: 6px;
+  }
+
+  &__result-header {
+    margin-bottom: 12px;
+  }
+
+  &__result-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

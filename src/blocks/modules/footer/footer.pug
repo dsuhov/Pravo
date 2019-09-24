@@ -1,1 +1,20 @@
 footer.footer
+  .footer__top-line
+    .container.footer__container
+      .footer__logo-block
+        picture.footer__picture
+          source(srcset="img/general/logo-pravo-i-tehnologii-white1_mobile@1x.webp, img/general/logo-pravo-i-tehnologii-white1_mobile@2x.webp 2x" media="(max-width: 375px)" type="image/webp")
+          source(srcset="img/general/logo-pravo-i-tehnologii-white1@1x.webp, img/general/logo-pravo-i-tehnologii-white1@2x.webp 2x" type="image/webp")
+          img.footer__img(src="img/general/logo-pravo-i-tehnologii-white1@1x.png" srcset="img/general/logo-pravo-i-tehnologii-white1@2x.png 2x" alt="Право и Технологии")
+        p.footer__logo-descr Московская коллегия<br />адвокатов
+      .footer__contacts
+        a.footer__phone-link(href="tel:+79060452107") 8 (906) 045-21-07
+        a.footer__mail-link(href="mailto:julia.bkp@gmail.com") julia.bkp@gmail.com
+        .footer__socail-links
+          include ../social-links/social-links
+  .footer__bottom-line
+    .container
+      .footer__extra-links
+        a(href="").footer__politics Политика конфиденциальности
+        .footer__developer Разработка сайта - 
+          a(href="") Бондарь Роман

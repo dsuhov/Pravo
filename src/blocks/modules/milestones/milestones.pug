@@ -1,0 +1,22 @@
+include ../../components/sect-header/sect-header
+
+- var bgHammerDeskPlshldr = 'data:image/gif;base64,R0lGODlhdgBXAIAAAP///wAAACH5BAEAAAEALAAAAAB2AFcAAAJ1jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpWVcAADs=';
+- var bgHammerDeskPng = 'img/general/bg-hammer_desktop.png';
+- var bgHammerDeskWebp = 'img/general/bg-hammer_desktop.webp';
+
+.milestones
+  picture.milestones__bg-pic
+    source(srcset=`${bgHammerDeskPlshldr}`, data-srcset=`${bgHammerDeskWebp}` type="image/webp")
+    img(src=`${bgHammerDeskPlshldr}` data-src=`${bgHammerDeskPng}`)
+  .container
+    .milestones__header
+      +sect-header('Ведем дело с момента заявки до того,<br />когда вы выдохнете спокойно после<br />справедливого исхода')
+    ul.milestones__row
+      li.milestones__milestone.ms-p1
+        include ../milestone/milestone-1
+      li.milestones__milestone.ms-p2
+        include ../milestone/milestone-2
+      li.milestones__milestone.ms-p3
+        include ../milestone/milestone-3
+      li.milestones__milestone.ms-p4
+        include ../milestone/milestone-4

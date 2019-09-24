@@ -1,0 +1,11 @@
+block variables
+
+.milestone
+  .milestone__inner
+    .milestone__stage-label= msLabel
+    h3.milestone__header!= msHeader
+    each paragraph in paragraphs
+      p.milestone__paragraph!= paragraph
+    .milestone__result-block
+      .milestone__result-header <span class="text-back">Результат:&nbsp;</span>
+      p.milestone__result-text= msResult

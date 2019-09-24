@@ -1,0 +1,209 @@
+.s-price {
+  box-sizing: border-box;
+  padding-top: 70px;
+
+  position: relative;
+  height: 1230px;
+
+  background-repeat: no-repeat;
+  background-size: 462px 941px, 475px 947px;
+  background-position: left top -115px, right top 527px;
+
+  &__shield {
+    position: absolute;
+    right: 0px;
+    bottom: 58px;
+    width: 162px;
+    height: 204px;
+
+    &.s-price__shield--animated {
+      // animation: shieldAnimation 4s ease-in-out infinite;
+    }
+  }
+
+  &__container {
+    max-width: 1036px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    margin-bottom: 28px;
+  }
+
+  &__subheader {
+    margin-bottom: 32px;
+  }
+
+  &__delimeter {
+    margin: 0 auto;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(37,85,222,0.8) 50%, rgba(255,255,255,0) 100%);
+    margin-bottom: 27px;
+  }
+
+  &__vars-title {
+    font-family: "UniNeueBold", sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 43px;
+  }
+
+  &__variants {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 62px;
+  }
+
+  &__var-block {
+    flex: 1 1 465px;
+    &:first-child {
+      margin-right: 108px;
+    }
+    // max-width: 465px;
+
+    background: $white;
+    box-sizing: border-box;
+    // width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px 0 rgba(30, 54, 94, 0.1);
+  }
+
+  &__var-block__inner {
+    padding: 25px 36px;
+
+    box-sizing: border-box;
+    width: 100%;
+    background: inherit;
+    box-shadow: 0 2px 20px 0 rgba(30, 54, 94, 0.2);
+    border-radius: inherit;
+  }
+
+  &__vb-header {
+    text-align: center;
+    font-family: "UniNeueBold", sans-serif;
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 25px;
+  }
+
+  &__var-block.s-price__var-block--2 &__vb-header {
+    margin-bottom: 10px;
+  }
+
+  &__smaller {
+    font-family: "UniNeueRegular", sans-serif;
+    font-size: 18px;
+  }
+
+  &__vb-pic {
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    &.s-price__vb-pic--left {
+      max-width: 165px;
+    }
+
+    &.s-price__vb-pic--right {
+      max-width: 122px;
+    }
+  }
+
+  &__description {
+    font-family: "UniNeueBook", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 26px;
+
+    b {
+      font-family: "UniNeueHeavy", sans-serif;
+    }
+  }
+
+  &__var-block.s-price__var-block--2 &__description  {
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 22px 0;
+    border: 1px dashed #e2e7f3;
+    border-radius: 6px;
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-bottom: 26px;
+  }
+
+  &__price-text {
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    font-family: "UniNeueBook", sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+
+    @import "ruble";
+  }
+
+  &__suggestion {
+    text-align: center;
+    font-family: "UniNeueHeavy", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+
+    margin-left: -14px;
+    margin-right: -14px;
+    margin-bottom: 24px;
+  }
+
+  &__var-block.s-price__var-block--2 &__suggestion  {
+    margin-bottom: 18px;
+  }
+
+  &__button {
+    &-wrapper {
+      padding: 0 10px;
+    }
+
+    span {
+      font-size: 18px;
+      padding: 8px 0;
+    }
+  }
+
+  &__input {
+    padding: 0 10px;
+    margin-bottom: 16px;
+  }
+
+  &__get-prices {
+    &-wrapper {
+      text-align: center;
+    }
+    font-size: 18px;
+    color: $mariner;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.no-webp .s-price {
+  background-image: url('../img/general/prices-bg-1.png'), url('../img/general/prices-bg-2.png') !important;
+}
+
+@keyframes shieldAnimation{
+  0% {
+    transform: translateY(0);
+  }
+  47% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

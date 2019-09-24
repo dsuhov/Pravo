@@ -1,4 +1,89 @@
 .footer {
-  height: 100px;
-  background: yellow;
+
+  &__top-line {
+    background: rgb(63, 60, 75);
+    background: linear-gradient(153deg, rgba(63, 60, 75, 1) 0%, rgba(43, 47, 61, 1) 100%);
+
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-block {
+    // margin-left: 10px;
+    padding-top: 10px;
+  }
+
+  &__picture {
+    width: 146px;
+    margin-bottom: 12px;
+  }
+
+  &__logo-descr {
+    font-size: 13px;
+    color: $white;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__phone-link {
+    font-family: "UniNeueBold", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__mail-link {
+    margin-bottom: 25px;
+    color: #5088e5;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  &__bottom-line {
+    
+  }
+
+  &__politics {
+    color: #6f9fee;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__developer {
+
+    a {
+      color: #6f9fee;
+      text-decoration: none;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__extra-links {
+    min-height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

@@ -1,0 +1,52 @@
+.milestones {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  background: $black-squeeze;
+  overflow: hidden;
+
+  &__header {
+    margin-bottom: 62px;
+  }
+
+  &__row {
+    @include row-flex();
+  }
+
+  &__milestone {
+    @include col();
+    @include size(3);
+
+    &.ms {
+      &-p1 {
+        padding-top: 132px;
+      }
+
+      &-p2 {
+        padding-top: 88px;
+      }
+
+      &-p3 {
+        padding-top: 44px;
+      }
+
+      &-p4 {
+        padding-top: 0;
+
+        .milestone__stage-label::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__bg-pic {
+    position: absolute;
+    z-index: 2;
+    top: 482px;
+    left: 0;
+    width: 709px;
+  }
+}

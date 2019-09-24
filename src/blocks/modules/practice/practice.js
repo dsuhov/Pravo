@@ -10,9 +10,8 @@ if (prSlider) {
     slidesToScroll: 1,
     variableWidth: true,
     centerMode: true,
-    arrows: false
     // centerPadding: '160px',
-    // prevArrow: '.what-situation__arrow--left',
-    // nextArrow: '.what-situation__arrow--right',
+    prevArrow: '.practice__arrow--left',
+    nextArrow: '.practice__arrow--right',
   })
 }
