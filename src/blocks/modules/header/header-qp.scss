@@ -1,0 +1,43 @@
+.header-qp {
+
+  &.header {
+    padding-bottom: 120px;
+  }
+  
+  &__blue-btn {
+    max-width: 500px;
+  }
+
+  &__par-3 {
+    font-family: "UniNeueBook", sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.01em;
+    color: $white;
+    max-width: 530px;
+
+    b {
+      font-family: "UniNeueHeavy", sans-serif;
+    }
+
+    margin-bottom: 28px;
+
+    @include breakpoint(mobile-m) {
+      font-size: 14px;
+      line-height: 20px;
+      max-width: 100%;
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__header-notice {
+    max-width: 364px;
+    margin-bottom: 48px;
+
+    @include breakpoint(mobile-m) {
+      max-width: 100%;
+      margin-bottom: 36px;
+    }
+  }
+}

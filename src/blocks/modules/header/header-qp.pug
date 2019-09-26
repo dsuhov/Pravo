@@ -1,0 +1,24 @@
+include ../../components/UN-Bold-42-48-10-white/UN-Bold-42-48-10-white
+include ../../components/UN-Book-24-white/UN-Book-24-white
+include ../../components/blue-btn/blue-btn-qp
+
+- var path1 = 'img/general/bg-header-women-full.webp';
+- var path2 = 'img/general/bg-header-women-full.png';
+- var path3 = 'img/general/logo-pravo-i-tehnologii-white1_mobile@1x.webp';
+- var path4 = 'img/general/logo-pravo-i-tehnologii-white1_mobile@1x.webp';
+
+header.header.header-qp
+  picture.header__bg-pic
+    source(srcset="img/general/empty.png" media="(max-width: 768px)" type="image/webp")
+    source(srcset="img/general/empty.png" media="(max-width: 768px)" type="image/jpg")
+    source(srcset=`${path1}`, type="image/webp")
+    img.header__bg-img(src=`${path2}` alt="Право и Технологии")
+  .container.header__cont
+    include ../top-line/top-line
+    +UN-Bold-42-48-10-white('Встанем на вашу сторону <br />и поможем добиться <br />справедливости при разводе', 'header__par-1')
+    +UN-Book-24-white('либо поможем уладить конфликт <span class="text-back">не доводя до развода</span>', 'header__par-2')
+    .header-qp__header-notice
+      include ../header-notice/header-notice
+    .header-qp__par-3 <b>Получите первоначальный</b> план самостоятельных действий<br/>и стоимость ведения дела, <b>ответив на 5 вопросов за 1 минуту</b>
+    .header-qp__blue-btn
+      +blue-btn-qp('header-qp-btn', 'Узнать стоимость и получить план действий')
