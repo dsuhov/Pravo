@@ -1,13 +1,17 @@
 .s-price {
   box-sizing: border-box;
   padding-top: 70px;
-
+  padding-bottom: 50px;
   position: relative;
-  height: 1230px;
 
   background-repeat: no-repeat;
   background-size: 462px 941px, 475px 947px;
   background-position: left top -115px, right top 527px;
+
+  @include breakpoint(mobile-l) {
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
 
   &__shield {
     position: absolute;
@@ -19,19 +23,41 @@
     &.s-price__shield--animated {
       animation: shieldAnimation 4s ease-in-out infinite;
     }
+
+    @include breakpoint(contSize) {
+      display: none;
+    }
   }
 
   &__container {
     max-width: 1036px;
     margin: 0 auto;
+    
+
+    @include breakpoint(contSize) {
+      max-width: 1024px;
+      padding: 0 15px;
+    }
+
+    @include breakpoint(mobile-l) {
+      padding: 0;
+    }
   }
 
   &__header {
     margin-bottom: 28px;
+
+    @include breakpoint(mobile-l) {
+      margin-bottom: 14px;
+    }
   }
 
   &__subheader {
     margin-bottom: 32px;
+
+    @include breakpoint(mobile-l) {
+      margin-bottom: 24px;
+    }
   }
 
   &__delimeter {
@@ -40,6 +66,11 @@
     height: 1px;
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(37,85,222,0.8) 50%, rgba(255,255,255,0) 100%);
     margin-bottom: 27px;
+
+    @include breakpoint(mobile-l) {
+      max-width: 80%;
+      margin-bottom: 19px;
+    }
   }
 
   &__vars-title {
@@ -47,18 +78,41 @@
     font-size: 24px;
     text-align: center;
     margin-bottom: 43px;
+
+    @include breakpoint(mobile-l) {
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
   }
 
   &__variants {
+    position: relative;
     display: flex;
     align-items: flex-start;
     margin-bottom: 62px;
+    z-index: 50;
+
+    @include breakpoint(laptop) {
+      display: block;
+      max-width: 576px;
+      margin: 0 auto;
+      margin-bottom: 26px;
+    }
   }
 
   &__var-block {
     flex: 1 1 465px;
     &:first-child {
       margin-right: 108px;
+
+      @include breakpoint(contSize) {
+        margin-right: 20px;
+      }
+
+      @include breakpoint(laptop) {
+        margin-right: 0;
+        margin-bottom: 34px;
+      }
     }
     // max-width: 465px;
 
@@ -68,6 +122,10 @@
     padding: 10px;
     border-radius: 6px;
     box-shadow: 0 2px 10px 0 rgba(30, 54, 94, 0.1);
+
+    @include breakpoint(mobile-l) {
+      padding: 5px;
+    }
   }
 
   &__var-block__inner {
@@ -78,6 +136,10 @@
     background: inherit;
     box-shadow: 0 2px 20px 0 rgba(30, 54, 94, 0.2);
     border-radius: inherit;
+
+    @include breakpoint(mobile-l) {
+      padding: 18px 10px;
+    }
   }
 
   &__vb-header {
@@ -86,20 +148,38 @@
     font-size: 24px;
     line-height: 31px;
     margin-bottom: 25px;
+
+    @include breakpoint(mobile-l) {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 18px;
+    }
   }
 
   &__var-block.s-price__var-block--2 &__vb-header {
     margin-bottom: 10px;
+
+    @include breakpoint(mobile-l) {
+      margin-bottom: 26px;
+    }
   }
 
   &__smaller {
     font-family: "UniNeueRegular", sans-serif;
     font-size: 18px;
+
+    @include breakpoint(mobile-l) {
+      font-size: 15px;
+    }
   }
 
   &__vb-pic {
     margin: 0 auto;
     margin-bottom: 10px;
+
+    @include breakpoint(mobile-l) {
+      margin-bottom: 0;
+    }
 
     &.s-price__vb-pic--left {
       max-width: 165px;
@@ -107,6 +187,10 @@
 
     &.s-price__vb-pic--right {
       max-width: 122px;
+
+      @include breakpoint(mobile-l) {
+        margin-bottom: 12px;
+      }
     }
   }
 
@@ -118,6 +202,12 @@
 
     b {
       font-family: "UniNeueHeavy", sans-serif;
+    }
+
+    @include breakpoint(mobile-l) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 18px;
     }
   }
 
@@ -134,6 +224,18 @@
     margin-left: -4px;
     margin-right: -4px;
     margin-bottom: 26px;
+
+    @include breakpoint(laptop) {
+      padding: 22px 10px;
+    }
+
+    @include breakpoint(mobile-l) {
+      padding: 10px 0;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 17px;
+      padding: 7px 0;
+    }
   }
 
   &__price-text {
@@ -144,7 +246,13 @@
     font-size: 16px;
     line-height: 25px;
 
+    @include breakpoint(mobile-l) {
+      padding-left: 25px;
+      font-size: 14px;
+    }
+
     @import "ruble";
+    
   }
 
   &__suggestion {
@@ -156,6 +264,15 @@
     margin-left: -14px;
     margin-right: -14px;
     margin-bottom: 24px;
+
+    @include breakpoint(mobile-l) {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 22px;
+
+      margin-left: -5px;
+      margin-right: -5px;
+    }
   }
 
   &__var-block.s-price__var-block--2 &__suggestion  {
@@ -165,6 +282,10 @@
   &__button {
     &-wrapper {
       padding: 0 10px;
+
+      @include breakpoint(mobile-l) {
+        padding: 0;
+      }
     }
 
     span {
@@ -173,9 +294,31 @@
     }
   }
 
+  .blue-btn#s-price__btn {
+    @include breakpoint(mobile-l) {
+      width: 100%;
+  
+      span {
+        font-size: 16px;
+        padding: 5px 0;
+      }
+    }
+  }
+
+  
+
   &__input {
     padding: 0 10px;
     margin-bottom: 16px;
+
+    @include breakpoint(mobile-l) {
+      padding: 0;
+    }
+
+    .simple-input {
+      font-size: 16px;
+      padding: 15px 10px 15px 30px;
+    }
   }
 
   &__get-prices {
@@ -186,8 +329,20 @@
     color: $mariner;
     text-decoration: none;
 
+    @include breakpoint(mobile-l) {
+      font-size: 14px;
+      line-height: normal;
+    }
+
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  #s-price__btn-2 {
+    width: 100%;
+    span {
+      padding: 6px 0;
     }
   }
 }

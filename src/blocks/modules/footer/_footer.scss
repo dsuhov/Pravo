@@ -6,22 +6,40 @@
 
     padding-top: 30px;
     padding-bottom: 35px;
+
+    @include breakpoint(mobile-l) {
+      padding-bottom: 41px;
+    }
   }
 
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint(mobile-l) {
+      flex-direction: column;
+    }
   }
 
   &__logo-block {
-    // margin-left: 10px;
     padding-top: 10px;
+
+    @include breakpoint(mobile-l) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
   }
 
   &__picture {
     width: 146px;
     margin-bottom: 12px;
+
+    @include breakpoint(mobile-l) {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
   }
 
   &__logo-descr {
@@ -33,6 +51,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+    @include breakpoint(mobile-l) {
+      align-items: center;
+    }
   }
 
   &__phone-link {
@@ -44,6 +66,10 @@
     &:hover {
       text-decoration: underline;
     }
+
+    @include breakpoint(mobile-l) {
+      font-size: 22px;
+    }
   }
 
   &__mail-link {
@@ -52,6 +78,10 @@
     text-decoration: none;
     &:hover {
       text-decoration: underline;
+    }
+
+    @include breakpoint(mobile-l) {
+      margin-bottom: 34px;
     }
   }
   
@@ -66,6 +96,10 @@
     &:hover {
       text-decoration: underline;
     }
+
+    @include breakpoint(mobile-xl) {
+      margin-bottom: 19px;
+    }
   }
 
   &__developer {
@@ -78,6 +112,10 @@
         text-decoration: underline;
       }
     }
+
+    @include breakpoint(mobile-xl) {
+      font-size: 14px;
+    }
   }
 
   &__extra-links {
@@ -85,5 +123,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint(mobile-xl) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 105px;
+    }
   }
 }

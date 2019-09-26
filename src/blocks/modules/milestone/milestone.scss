@@ -5,6 +5,14 @@
     position: relative;
     z-index: 5;
     padding: 42px 5px 28px 15px;
+
+    @include breakpoint(tablet) {
+      padding: 42px 10px 28px 10px;
+    }
+
+    @include breakpoint(mobile-l) {
+      padding: 38px 10px 14px 10px;
+    }
   }
 
   &__stage-label {
@@ -32,6 +40,10 @@
       width: 238px;
       height: 75px;
       background: url('../img/general/arc-arrow.svg') no-repeat;
+
+      @include breakpoint(contSize) {
+        display: none;
+      }
     }
   }
 
@@ -40,11 +52,25 @@
     font-size: 22px;
     line-height: 28px;
     margin-bottom: 16px;
+
+    @include breakpoint(tablet) {
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+    }
   }
 
   &__paragraph {
     line-height: 24px;
     margin-bottom: 24px;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 24px;
+    }
+
+    @include breakpoint(mobile-m) {    
+      margin-bottom: 22px;
+    }
   }
 
   &__result-block {
@@ -58,5 +84,9 @@
   &__result-text {
     font-size: 16px;
     line-height: 22px;
+
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
   }
 }

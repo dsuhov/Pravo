@@ -3,21 +3,67 @@
   z-index: 1;
   box-sizing: border-box;
   padding-top: 70px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
   background: $black-squeeze;
   overflow: hidden;
 
+  @include breakpoint(contSize) {
+    padding-bottom: 50px;
+  }
+
+  @include breakpoint(mobile-xl) {
+    padding-top: 30px;
+    padding-bottom: 38px;
+  }
+
   &__header {
     margin-bottom: 62px;
+
+    @include breakpoint(mobile-l) {
+      margin-bottom: 34px;
+    }
   }
 
   &__row {
+    z-index: 10;
     @include row-flex();
+
+    @include breakpoint(mobile-l) {
+      display: block;
+      margin: 0;
+      position: relative;
+    }
+  }
+
+  &__row-conainer {
+    @include breakpoint(mobile-l) {
+      position: relative;
+    }
+  }
+
+  &__arrow {
+    display: none;
+
+    @include breakpoint(mobile-l) {
+      display: flex;
+      position: absolute;
+      top: 39%;
+      z-index: 12;
+
+      &.milestones__arrow--left {
+        left: -7px;
+      }
+
+      &.milestones__arrow--right {
+        right: -7px;
+      }
+    }
   }
 
   &__milestone {
     @include col();
     @include size(3);
+    z-index: 5;
 
     &.ms {
       &-p1 {
@@ -39,7 +85,60 @@
           display: none;
         }
       }
+
+      @include breakpoint(contSize) {
+        &-p1, &-p2, &-p3, &-p4 {
+          padding-top: 0;
+          margin-bottom: 40px;
+        }
+
+        &-p1, &-p3, {
+          @include shift-left(1);
+        }
+
+      }
+
+      @include breakpoint(tablet) {
+        &-p1, &-p2, &-p3, &-p4 {
+          @include shift-left(2);
+        }
+      }
+
+      @include breakpoint(mobile-xl) {
+        &-p1, &-p2, &-p3, &-p4 {
+          @include shift-left(0);
+        }
+      }
+
+      @include breakpoint(mobile-l) {
+        &-p1, &-p2, &-p3, &-p4 {
+          @include shift-left(0);
+          padding: 14px 23px 0;
+        }
+      }
+
+      
     }
+
+    @include breakpoint(contSize) {
+      @include size(5);
+      // @include shift-left(1);
+    }
+
+    @include breakpoint(tablet) {
+      @include size(8);
+    }
+
+    @include breakpoint(mobile-xl) {
+      @include size(12);
+    }
+
+    @include breakpoint(mobile-l) {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      width: auto;
+    }
+    
   }
 
   &__bg-pic {
@@ -48,5 +147,14 @@
     top: 482px;
     left: 0;
     width: 709px;
+
+    @include breakpoint(contSize) {
+      top: initial;
+      bottom: 0;
+    }
+
+    @include breakpoint(mobile-xl) {
+      width: 240px;
+    }
   }
 }

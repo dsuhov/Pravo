@@ -12,4 +12,7 @@ $(document).ready(function() {
     }
   });
 
+  if (window.matchMedia('(max-width: 1024px)').matches) {
+    $('.s-price__description br, .s-price__header br, .s-price__suggestion br').replaceWith( " " );
+  }
 })

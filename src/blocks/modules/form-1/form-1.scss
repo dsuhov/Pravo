@@ -198,6 +198,8 @@
 
   &__advantages {
     @include row-flex();
+    margin-left: 0;
+    margin-right: 0;
   }
 
   &__advantage {

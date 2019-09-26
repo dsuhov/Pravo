@@ -6,3 +6,6 @@ import "%modules%/practice/practice";
 import "%modules%/form-1/form-1";
 import "%modules%/practice-item/practice-item";
 import "%modules%/s-price/s-price";
+import "%modules%/milestone/milestone";
+import "%modules%/milestones/milestones";
+import "%modules%/s-map/s-map";
