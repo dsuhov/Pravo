@@ -2,12 +2,24 @@
   background: $polar;
   padding-top: 107px;
   padding-bottom: 72px;
+
+  @include breakpoint(laptop) {
+    padding-top: 50px;
+    padding-bottom: 16px;
+  }
   
+  @include breakpoint(mobile-xl) {
+    padding-top: 30px;
+  }
 
   &__header {
     max-width: 500px;
     margin: 0 auto;
     margin-bottom: 27px;
+
+    @include breakpoint(mobile-xl) {
+      margin-bottom: 12px;
+    }
   }
   
 
@@ -15,10 +27,26 @@
     max-width: 520px;
     margin: 0 auto;
     margin-bottom: 47px;
+
+    @include breakpoint(mobile-xl) {
+      margin-bottom: 4px;
+    }
   }
 
   &__slider-item {
     margin: 0 110px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    @include breakpoint(contSize) {
+      margin: 0 30px;
+    }
+
+    @include  breakpoint(tablet) {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 20px 25px;
+    }
   }
 
   &__slider-container {
@@ -30,20 +58,34 @@
       position: absolute;
       z-index: 10;
       top: 0;
-      width: 390px;
+      width: 20%;
       height: 100%;
       
     }
 
     &::before {
       left: 0;
-      background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+      background: linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(246,249,253,0.9) 56%, rgba(246,249,253,1) 79%, rgba(246,249,253,1) 100%);
     }
     
     &::after {
       right: 0;
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(246,249,253,0.9) 56%, rgba(246,249,253,1) 79%, rgba(246,249,253,1) 100%);
     }
+
+    @include breakpoint(contSize) {
+      &::before, &::after {
+        width: 10%;
+      }
+    }
+
+    @include  breakpoint(tablet) {
+      &::before, &::after {
+        display: none;
+      }
+    }
+
+    
   }
 
   &__controls {
@@ -52,7 +94,13 @@
     width: 1px;
     top: 0;
     left: 50%;
-    z-index: 10;
+    z-index: 20;
+
+    @include  breakpoint(tablet) {
+      width: 100%;
+      pointer-events: none;
+      left: 0;
+    }
   }
 
   &__arrow {
@@ -67,6 +115,33 @@
 
     &.practice__arrow--right {
       right: -435px;
+    }
+
+    @include breakpoint(contSize) {
+      &.practice__arrow--left {
+        left: -335px;
+      }
+  
+      &.practice__arrow--right {
+        right: -335px;
+      }
+    }
+
+    @include  breakpoint(tablet) {
+      &.practice__arrow--left {
+        left: 1px;
+      }
+  
+      &.practice__arrow--right {
+        right: 1px;
+      }
+      pointer-events: auto;
+    }
+
+    @include  breakpoint(mobile-xl) {
+      z-index: 30;
+      
+      top: 53.4%;
     }
   }
 }

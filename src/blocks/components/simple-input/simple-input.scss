@@ -24,4 +24,9 @@
   &:focus {
     box-shadow: 0 0 10px 0 rgba(129, 164, 216, 0.6) inset;
   }
+
+  @include breakpoint(mobile-m) {
+    font-size: 14px;
+    padding: 12px 10px 12px 30px;
+  }
 }

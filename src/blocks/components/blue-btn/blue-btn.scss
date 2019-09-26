@@ -53,4 +53,19 @@
   }
 }
 
+@include breakpoint(mobile-m) {
+  .form-1__form .blue-btn {
+    width: 100%;
+  }
+
+  .form-1__form .blue-btn__inner {
+    padding: 21px 0;
+  }
+
+  .form-1__form .blue-btn__top-text {
+    font-size: 16px;
+  }
+}
+
+
 @import "blue-btn-hover";

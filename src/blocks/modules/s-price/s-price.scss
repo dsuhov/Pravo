@@ -17,7 +17,7 @@
     height: 204px;
 
     &.s-price__shield--animated {
-      // animation: shieldAnimation 4s ease-in-out infinite;
+      animation: shieldAnimation 4s ease-in-out infinite;
     }
   }
 
@@ -196,7 +196,7 @@
   background-image: url('../img/general/prices-bg-1.png'), url('../img/general/prices-bg-2.png') !important;
 }
 
-@keyframes shieldAnimation{
+@keyframes shieldAnimation {
   0% {
     transform: translateY(0);
   }

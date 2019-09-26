@@ -1,4 +1,5 @@
 mixin advantage(content)
   .advantage!= content
     .advantage__tick-icon
-      include ../tick-icon/tick-icon
+      .tick-icon.advantage__ti
+        +icon('tick_circle')

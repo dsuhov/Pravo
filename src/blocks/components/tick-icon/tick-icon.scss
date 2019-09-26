@@ -26,3 +26,15 @@
     }
   }
 }
+
+.tick-icon.advantage__ti {
+  @include breakpoint(mobile-l) {
+    width: 30px;
+    height: 30px;
+
+    .icon-tick_circle {
+      width: 13px;
+      height: 13px;
+    }
+  }
+}

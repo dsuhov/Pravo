@@ -2,22 +2,44 @@
   box-sizing: border-box;
   background: $white;
   width: 730px;
-  // margin: 0 auto;
   box-shadow: 0 2px 30px 0 rgba(11, 16, 46, 0.1);
   border-radius: 10px;
   padding: 38px 35px;
+
+  @include  breakpoint(contSize) {
+    width: 620px;
+  }
+
+  @include  breakpoint(tablet) {
+    box-shadow: 0 2px 10px 0 rgba(11, 16, 46, 0.1);
+    width: 100%;
+  }
+
+  @include  breakpoint(mobile-xl) {
+    padding: 20px 15px;
+    padding-bottom: 2px;
+  }
 
   &__delimeter {
     width: 100%;
     height: 1px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(37, 85, 222 ,1) 50%, rgba(255, 255, 255, 0) 100%);
     margin-bottom: 34px;
+
+    @include  breakpoint(mobile-xl) {
+      margin-bottom: 29px;
+    }
   }
 
   &__doer-photo {
     width: 65px;
     border-radius: 50%;
     overflow: hidden;
+
+    @include  breakpoint(mobile-xl) {
+      width: 33px;
+      margin-left: 5px;
+    }
   }
 
   &__title {
@@ -25,15 +47,35 @@
     font-size: 24px;
     line-height: 32px;
     margin-bottom: 30px;
+
+    @include  breakpoint(mobile-xl) {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 24px;
+    }
   }
 
   &__descr-block {
     margin-bottom: 36px;
+
+    @include  breakpoint(mobile-xl) {
+      margin-bottom: 29px;
+    }
   }
 
   &__descr-header, &__result-header {
     font-family: "UniNeueBold", sans-serif;
     font-size: 20px;
+
+    @include  breakpoint(mobile-xl) {
+      font-size: 14px;
+    }
+  }
+
+  &__result-header {
+    @include  breakpoint(mobile-xl) {
+      font-size: 16px;
+    }
   }
 
   &__descr:first-child {
@@ -43,6 +85,11 @@
   
   &__descr-header {
     margin-bottom: 10px;
+
+    @include  breakpoint(mobile-xl) {
+      margin-bottom: 3px;
+    }
+    
   }
 
   &__result-header {
@@ -52,6 +99,12 @@
   &__descr-text {
     line-height: 23px;
     margin-bottom: 6px;
+
+    @include  breakpoint(mobile-xl) {
+      font-size: 13px;
+      line-height: 18px;
+      margin-bottom: 10px;
+    }
   }
 
   &__descr-more {
@@ -60,6 +113,10 @@
     
     &:hover {
       text-decoration: underline;
+    }
+
+    @include  breakpoint(mobile-xl) {
+      font-size: 13px;
     }
   }
 
@@ -71,6 +128,13 @@
     font-family: "UniNeueBold", sans-serif;
     line-height: 24px;
     margin-bottom: 34px;
+
+    @include  breakpoint(mobile-xl) {
+      font-size: 14px;
+      line-height: 20px;
+      margin-right: -5px;
+      margin-bottom: 27px;
+    }
   }
 
   &__doer {
@@ -80,14 +144,28 @@
   &__doer-info {
     padding-top: 7px;
     margin-left: 18px;
+
+    @include  breakpoint(mobile-xl) {
+      padding-top: 0px;
+      margin-left: 10px;
+    }
   }
 
   &__doer-header {
     margin-bottom: 2px;
+
+    @include  breakpoint(mobile-xl) {
+      font-size: 13px;
+      margin-bottom: 0;
+    }
   }
 
   &__doer-name {
     font-family: "UniNeueBold", sans-serif;
     font-size: 16px;
+
+    @include  breakpoint(mobile-xl) {
+      font-size: 13px;
+    }
   }
 }

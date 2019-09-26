@@ -11,4 +11,8 @@ $(document).ready(function() {
       msgrInput.attr('placeholder', `Введите номер  ${val}`)
     });
   }
+
+  if (window.matchMedia('(max-width: 1024px)').matches) {
+    $('.form-1__col-1 br').replaceWith(' ');
+  }
 })

@@ -9,6 +9,11 @@
     background: linear-gradient(-63deg, rgba(63, 60, 75, 1) 0%, rgba(43, 47, 61, 1) 100%);
   }
 
+  @include breakpoint(tablet) {
+    padding-bottom: 32px;
+    padding-top: 34px;
+  }
+
   &__block {
     margin-bottom: 70px;
     background: $white;
@@ -16,6 +21,23 @@
     border-radius: 6px;
 
     @include bottom-plank(10px, 6px);
+
+    @include breakpoint(mobile-m) {
+      @include bottom-plank(5px, 6px);
+    }
+
+    @include breakpoint(laptop) {
+      box-sizing: border-box;
+      max-width: $tablet;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px 40px;
+    }
+
+    @include breakpoint(mobile-m) {
+      padding: 28px 15px;
+      margin-bottom: 38px;
+    }
   }
 
   &__row {
@@ -26,6 +48,11 @@
     box-sizing: border-box;
     @include col();
     @include size(6);
+
+    @include breakpoint(laptop) {
+      @include size(12);
+      // @include shift-left(1);
+    }
   }
 
   &__col-1 {
@@ -43,11 +70,32 @@
       height: 100%;
       background: linear-gradient(-63deg, rgba(255,255,255,0) 0%, rgba(238,241,252,0) 5%, rgba(37,85,222,0.8) 50%, rgba(238,241,252,0) 95%, rgba(255,255,255,0) 100%);
     }
+
+    @include breakpoint(laptop) {
+      padding: 0;
+      margin-bottom: 40px;
+      // text-align: center;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    @include breakpoint(mobile-m) {
+      margin-bottom: 24px;
+    }
   }
 
   &__col-2 {
     padding-top: 62px;
     padding-right: 5px;
+
+    @include breakpoint(laptop) {
+      padding: 0;
+    }
   }
 
   &__title {
@@ -55,6 +103,15 @@
     font-size: 34px;
     line-height: 42px;
     margin-bottom: 20px;
+
+    @include breakpoint(laptop) {
+      text-align: center;
+    }
+
+    @include breakpoint(mobile-m) {
+      font-size: 22px;
+      line-height: 28px;
+    }
   }
 
   &__text {
@@ -66,6 +123,21 @@
     b {
       font-family: "UniNeueHeavy", sans-serif;
     }
+
+    @include breakpoint(laptop) {
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint(mobile-m) {
+      font-size: 16px;
+      line-height: 22px;
+      margin-right: -8px;
+      margin-bottom: 26px;
+
+      & .text-back {
+        background: none;
+      }
+    }
   }
 
   &__notice {
@@ -74,6 +146,16 @@
     padding: 5px;
     border-radius: 6px;
     box-shadow: 0px 2px 20px 0px rgba(30, 54, 94, 0.2);
+
+    @include breakpoint(laptop) {
+      margin: 0 auto;
+    }
+    @include breakpoint(mobile-m) {
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      margin: 0 -5px;
+    }   
   }
 
   &__notice-inner {
@@ -82,18 +164,36 @@
     border-radius: 6px;
 
     display: flex;
+
+    @include breakpoint(mobile-m) {
+      padding: 10px 0 12px 0;
+      align-items: center;
+    }
   }
 
   &__notice-pic {
     width: 64px;
     height: 64px;
     margin-right: 10px;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile-m) {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      margin-left: 4px;
+    }
   }
 
   &__notice-text {
     font-family: "UniNeueBook", sans-serif;
     font-size: 15px;
     line-height: 24px;
+
+    @include breakpoint(mobile-l) {
+      font-size: 13px;
+      line-height: 19px;
+    }
   }
 
   &__advantages {
@@ -103,6 +203,20 @@
   &__advantage {
     @include col();
     @include size(4);
+
+    @include breakpoint(tablet) {
+      @include size(8);
+      @include shift-left(2);
+
+      &:not(:last-child) {
+        margin-bottom: 28px;
+      }
+    }
+
+    @include breakpoint(mobile-m) {
+      @include size(12);
+      @include shift-left(0);
+    }
   }
 
   &__form {
@@ -110,14 +224,33 @@
     margin: 0 auto;
 
     color: $regent-gray;
+
+    @include breakpoint(laptop) {
+      max-width: 100%;
+    }
+
+    @include breakpoint(mobile-m) {
+      box-sizing: border-box;
+      max-width: none;
+      // width: calc(100% + 10px);
+      margin: 0 -5px;
+    }
   }
 
   &__label {
     margin-bottom: 8px;
+    @include breakpoint(mobile-m) {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
   }
 
   &__input {
     margin-bottom: 17px;
+    @include breakpoint(laptop) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
   }
   
   &__choose-msngr {
@@ -136,6 +269,11 @@
   &__accept {
     margin-top: 8px;
     padding-left: 17px;
+
+    @include breakpoint(mobile-m) {
+      margin-top: 13px;
+      padding-left: 4px;
+    }
   }
 
   &__picture {
@@ -143,5 +281,9 @@
     right: 0;
     top: 214px;
     width: 320px;
+
+    @include breakpoint(contSize) {
+      display: none;
+    }
   }
 }

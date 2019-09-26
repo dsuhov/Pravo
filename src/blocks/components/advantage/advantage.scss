@@ -11,6 +11,12 @@
     font-family: "UniNeueHeavy", sans-serif;
   }
 
+  @include breakpoint(mobile-l) {
+    padding-top: 40px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
   &__tick-icon {
     position: absolute;
     left: 50%;
@@ -18,3 +24,4 @@
     top: 0;
   }
 }
+

@@ -10,8 +10,16 @@ if (prSlider) {
     slidesToScroll: 1,
     variableWidth: true,
     centerMode: true,
-    // centerPadding: '160px',
     prevArrow: '.practice__arrow--left',
     nextArrow: '.practice__arrow--right',
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          variableWidth: false,
+          centerMode: false
+        }
+      }
+    ]
   })
 }

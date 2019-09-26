@@ -30,6 +30,15 @@
     svg {
       fill: $mariner;
       margin-right: 5px;
+
+      @include breakpoint(mobile-m) {
+        margin-right: 3px;
+      }
+    }
+
+    @include breakpoint(mobile-m) {
+      font-size: 12px;
+      padding: 0;
     }
   }
   
