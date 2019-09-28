@@ -1,0 +1,63 @@
+.quiz {
+  padding: 0 15px;
+
+  & * {
+    box-sizing: border-box;
+  }
+
+  &__content {
+    display: flex;
+    background: $white;
+    border-radius: 8px;
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  &__main-block {
+    border-radius: 8px;
+    box-shadow: 0 0 15px 0 rgba(30, 54, 94, 0.15);
+    margin-right: 20px;
+    flex: 1 1 768px;
+    padding: 74px 80px 20px;
+  }
+
+  &__right-block {
+    flex: 1 1 302px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__cases {
+    border-radius: 8px;
+    box-shadow: 0 0 15px 0 rgba(30, 54, 94, 0.15);
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+
+  &__fast-form {
+    border-radius: 8px;
+    box-shadow: 0 0 15px 0 rgba(30, 54, 94, 0.15);
+  }
+
+  &__questions {
+    min-height: 225px;
+    padding-top: 34px;
+  }
+
+  &__progress {
+    max-width: 607px;
+    margin: 0 auto;
+  }
+
+  &__cases {
+    padding: 20px 20px;
+  }
+
+  &__fast-form {
+    padding: 14px 20px 15px;
+  }
+}
+
+@import "quiz-cases";
+@import "fast-form";

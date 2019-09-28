@@ -1,0 +1,131 @@
+.q-last-block {
+  max-width: 607px;
+  margin: 0 auto;
+  display: none;
+
+  &__title {
+    text-align: center;
+    font-family: "UniNeueBold", sans-serif;
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 32px;
+  }
+
+  &__questions {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    cursor: pointer;
+    display: flex;
+    flex: 1 1 275px;
+    align-items: center;
+    max-width: 275px;
+    border: 1px solid #d9deec;
+    border-radius: 4px;
+    padding: 21px 19px;
+    transition: all 0.2s;
+    margin-bottom: 20px;
+  }
+
+  &__label-checkbox {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0 rgba(53, 56, 66, 0.3) inset;
+    margin-right: 15px;
+    transition: all 0.2s;
+  }
+
+  &__label-text {
+    font-size: 18px;
+  }
+
+  &__input:checked + &__label {
+    border: 1px solid $mariner;
+  }
+
+  &__input:checked + &__label &__label-checkbox {
+    box-shadow: inset 0 0 0 8px $mariner;
+  }
+  
+  &__bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &__tel {flex: 1 1 275px;
+    max-width: 275px;
+    input {
+      width: 100%;
+    }
+  }
+
+  &__btn-accept {
+    max-width: 275px;
+    flex: 1 1 275px;
+
+    span {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .blue-quiz-btn__inner {
+      padding: 18px 0;
+    }
+  }
+
+  &__accept {
+    display: flex;
+    justify-content: flex-end;
+
+    .accept__label {
+      font-size: 12px;
+    }
+    
+    margin-right: -18px;
+    margin-bottom: 34px;
+  }
+
+  &__final-row {
+    padding-left: 54px;
+    position: relative;
+    margin-right: -10px;
+    margin-bottom: 10px;
+  }
+
+  &__sheld {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 44px;
+    
+    .icon-shield {
+      width: 100%;
+      height: auto;
+      fill: $mariner;
+      width: 38px;
+      height: 44px;
+    }
+  }
+
+  &__low-text {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: "UniNeueBook", sans-serif;
+
+    b {
+      font-family: "UniNeueHeavy", sans-serif;
+    }
+  }
+}

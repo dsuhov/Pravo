@@ -1,0 +1,12 @@
+mixin q-block(question, index)
+  .q-block(class=`q-block--${index+1}`)
+    p.q-block__title #{question.title}
+    .q-block__inputs
+      input(type="radio" id=`${question.id1}` name=`${question.title}` value="Да").q-block__input
+      label(for=`${question.id1}`).q-block__label
+        .q-block__label-checkbox
+        span.q-block__label-text Да
+      input(type="radio" id=`${question.id2}` name=`${question.title}` value="Нет").q-block__input
+      label(for=`${question.id2}`).q-block__label
+        .q-block__label-checkbox
+        span.q-block__label-text Нет

@@ -1,0 +1,8 @@
+include ../../components/blue-btn/blue-quiz-btn
+include ../../components/prev-btn/prev-btn
+
+.controls
+  .controls__prev
+    +prev-btn('quiz_prev', 'Назад')
+  .controls__next
+    +blue-quiz-btn('quiz_next', 'Следующий вопрос')

@@ -1,5 +1,7 @@
 import "../modernizr-custom";
 import LazyLoad from "vanilla-lazyload";
+import "%modules%/quiz/quiz";
+
 // Check the webp support
 Modernizr.on('webp', function(result) {
   if (result) {
@@ -11,3 +13,4 @@ Modernizr.on('webp', function(result) {
 
 // Initialize lazyload
 new LazyLoad();
+

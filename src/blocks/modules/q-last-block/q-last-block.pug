@@ -1,0 +1,36 @@
+include ../../components/simple-input/simple-input
+include ../../components/blue-btn/blue-quiz-btn
+include ../../components/accept/accept
+
+.q-last-block
+  .q-last-block__title Как вам удобнее получить консультацию?
+  .q-last-block__questions
+    input(checked type="radio" id="lb-q1" name="Как вам удобнее получить консультацию?" value="По телефону").q-last-block__input
+    label(for="lb-q1").q-last-block__label
+      .q-last-block__label-checkbox
+      span.q-last-block__label-text По телефону
+    input(type="radio" id="lb-q2" name="Как вам удобнее получить консультацию?" value="WhatsApp").q-last-block__input
+    label(for="lb-q2").q-last-block__label
+      .q-last-block__label-checkbox
+      span.q-last-block__label-text WhatsApp
+    input(type="radio" id="lb-q3" name="Как вам удобнее получить консультацию?" value="Viber").q-last-block__input
+    label(for="lb-q3").q-last-block__label
+      .q-last-block__label-checkbox
+      span.q-last-block__label-text Viber
+    input(type="radio" id="lb-q4" name="Как вам удобнее получить консультацию?" value="Telegram").q-last-block__input
+    label(for="lb-q4").q-last-block__label
+      .q-last-block__label-checkbox
+      span.q-last-block__label-text Telegram
+  .q-last-block__bottom-row
+    .q-last-block__tel
+      +simple-input('+7 (___) ___-__-__', 'telephone', 'lb-tel-input')
+    .q-last-block__btn-accept
+      button(id="lb-submit-btn" type="submit" name="Квиз").blue-btn
+        .blue-quiz-btn__inner
+          span.blue-btn__top-text Узнать стоимость<br />и получить консультацию
+  .q-last-block__accept
+    +accept('lb-accept-rules')
+  .q-last-block__final-row
+    .q-last-block__sheld
+      +icon('shield')
+    p.q-last-block__low-text В результате бесплатной консультации с юристом <b>вы получите<br />план самостоятельных действий и узнаете точную стоимость ведения дела</b>

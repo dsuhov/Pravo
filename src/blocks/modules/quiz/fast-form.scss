@@ -1,0 +1,38 @@
+.fast-form {
+  text-align: center;
+
+  &__title {
+    font-family: "UniNeueBold", sans-serif;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__suggestion {
+    margin: 0 -5px;
+    margin-bottom: 12px;
+  }
+
+  &__input {
+    font-family: "UniNeueBook", sans-serif;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__submit {
+    width: 100%;
+    font-family: "UniNeueBold", sans-serif;
+    color: $mariner;
+    font-size: 15px;
+    line-height: 28px;
+    padding: 16px 0;
+    border: 1px solid $mariner;
+    border-radius: 6px;
+    // transition: all 0.3s;
+
+    &:hover {
+      background: linear-gradient(0deg, rgba(17,57,169,1) 0%,   rgba(50,103,253,1) 100%);
+      border: 1px solid transparent;
+      color: $white;
+    }
+  }
+}
