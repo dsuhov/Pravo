@@ -4,6 +4,10 @@
   display: flex;
   align-items: center;
 
+  @include breakpoint(mobile-l) {
+    justify-content: center;
+  }
+
   &:hover {
     text-decoration: underline;
   }
@@ -15,6 +19,17 @@
   &__text {
     font-size: 16px;
     margin-left: 5px;
+
+    @include breakpoint(mobile-l) {
+      font-size: 15px;
+      margin-left: 12px;
+      vertical-align: middle;
+    }
+  }
+
+  &__arrow {
+    display: inline-block;
+    vertical-align: middle;
   }
 
   &.prev-btn--hidden {

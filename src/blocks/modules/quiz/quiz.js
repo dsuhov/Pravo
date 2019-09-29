@@ -11,6 +11,7 @@ class Quiz {
     
     this.scaleItemsPimp = this.rootNode.find(".progress__pimp");
     this.scaleItemsStrip = this.rootNode.find(".progress__strip");
+    this.scaleItemsTitles  = this.rootNode.find(".progress__title");
 
     this.blocks = this.rootNode.find(".q-block");
     
@@ -88,12 +89,17 @@ class Quiz {
   reduceProgress() {
     $(this.scaleItemsPimp[this.currStep+1]).removeClass('progress__pimp--active');
     $(this.scaleItemsStrip[this.currStep]).removeClass('progress__strip--active');
+    $(this.scaleItemsTitles[this.currStep+1]).removeClass('progress__title--shown');
+    $(this.scaleItemsTitles[this.currStep]).addClass('progress__title--shown');
   }
   
   updateStepScale() {
     setTimeout(() => {
       $(this.scaleItemsPimp[this.currStep]).addClass('progress__pimp--active');
+      $(this.scaleItemsTitles[this.currStep]).addClass('progress__title--shown');
+      $(this.scaleItemsTitles[this.currStep-1]).removeClass('progress__title--shown');
     }, 500)
+
     $(this.scaleItemsStrip[this.currStep-1]).addClass('progress__strip--active');
     
   }

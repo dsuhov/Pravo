@@ -1,0 +1,17 @@
+.close-btn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  .icon-close {
+    width: 14px;
+    height: 14px;
+    fill: rgba(255, 255, 255, 0.5);
+  }
+
+  &:hover {
+    .icon-close {
+      fill: rgba(255, 255, 255, 1);
+    }
+  }
+}

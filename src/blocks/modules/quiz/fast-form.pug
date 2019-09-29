@@ -3,6 +3,7 @@ include ../../components/simple-input/simple-input
 .fast-form.quiz__fast-form
   .fast-form__title Не хотите отвечать на вопросы?
   .fast-form__suggestion Оставьте телефон - мы перезвоним через 10 минут и проконсультируем вас
-  .fast-form__input
-    +simple-input('+7 (___) ___-__-__', 'telephone', 'quiz-ff-input')
-  button(type="submit" name="Заявка на консултацию с квиза").fast-form__submit Заказать звонок
+  form(action="" method="post").fast-form__form
+    .fast-form__input
+      +simple-input('+7 (___) ___-__-__', 'telephone', 'quiz-ff-input')
+    button(type="submit" name="Заявка на консултацию с квиза").fast-form__submit Заказать звонок

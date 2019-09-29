@@ -68,29 +68,63 @@
   }
 }
 
+.blue-btn#quiz_next {
+  @include breakpoint(mobile-m) {
+    width: 100%;
+  }
+}
+
 .blue-quiz-btn {
+  
   &__top-text {
     font-family: "UniNeueRegular", sans-serif;
     font-size: 16px;
     line-height: 28px;
     text-shadow: 0px 1px 0px rgba(18, 60, 160, 1);
+
+    @include breakpoint(mobile-l) {
+      line-height: 21px;
+    }
   }
+
+  
 
   &__inner {
     box-sizing: border-box;
     padding: 27px 0 22px;
     border-radius: 6px;
     box-shadow: 0px 0px 15px 0px rgba(171, 224, 255, 0.4) inset;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      transform: translateY(-1px);
+      margin-right: 15px;
+
+      @include breakpoint(mobile-xl) {
+        margin-right: 5px;
+      }
+
+      @include breakpoint(mobile-l) {
+        margin-right: 15px;
+      }
+    }
   
     @include breakpoint(mobile-m) {
       padding: 20px 0;
     }
+
+    @include breakpoint(mobile-m) {
+      padding: 27px 0 22px;
+    }
   }
 
   &__arrow {
-    display: inline;
+    width: 22px;
+    height: 15px;
+    display: inline-block;
     vertical-align: middle;
-    margin-left: 16px;
+    transform: rotate(180deg);
   }
 }
 

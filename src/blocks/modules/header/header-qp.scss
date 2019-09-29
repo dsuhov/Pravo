@@ -2,6 +2,10 @@
 
   &.header {
     padding-bottom: 120px;
+
+    @include breakpoint(mobile-m) {
+      padding-bottom: 60px;
+    }
   }
   
   &__blue-btn {
