@@ -1,0 +1,27 @@
+include ../../../components/simple-input/simple-input
+include ../inc/m-big-header/m-big-header
+include ../inc/m-subheader/m-subheader
+include ../inc/m-bold-subheader/m-bold-subheader
+include ../inc/m-subm-btn/m-subm-btn
+include ../../../components/choose-msngr/choose-msngr
+include ../../../components/accept/accept
+include ../../../components/textarea/textarea
+
+.popup#modal-3.modal-3
+  .modal-3__container
+    .modal-3__close-btn
+      include ../../../components/close-btn/close-btn
+    +m-big-header('Получите ответ на свой вопрос<br />в течение 30 минут', 'modal-3__header')
+    
+    form(action="" method="post" id="modal-3-form").modal-3__form
+      +textarea('modal-3__textarea')
+      +simple-input('Как вас зовут?', 'username', 'modal-3-form__name')
+      p.modal-3__form-prompt.form-prompt Как вам удобно получить ответ?
+      .modal-3__choose-msngr
+        +choose-msngr('2')
+      .modal-3__input
+        +simple-input('Введите номер Телефона', 'number', 'modal-3_messenger')
+      +m-subm-btn('modal-3__btn', 'Получить оценку перспектив','90')
+      +accept('modal-3', 'modal-3__accept')
+    .modal-3__right-block
+      include ../inc/right-block/right-block

@@ -1,5 +1,4 @@
-.modal-1 {
-  
+.modal-2 {
   &__container {
     position: relative;
     box-sizing: border-box;
@@ -8,6 +7,19 @@
     background: $white;
     border-radius: 8px;
     padding: 34px 50px 30px;
+  }
+
+  &__right-block {
+    position: absolute;
+    right: -4px;
+    bottom: 0;
+  }
+
+  &__close-btn {
+    position: absolute;
+    z-index: 30;
+    top: -16px;
+    right: -34px;
   }
 
   &__delimeter {
@@ -52,18 +64,5 @@
   &__accept {
     margin-top: 3px;
     margin-left: 17px;
-  }
-
-  &__right-block {
-    position: absolute;
-    right: -4px;
-    bottom: 0;
-  }
-
-  &__close-btn {
-    position: absolute;
-    z-index: 30;
-    top: -16px;
-    right: -34px;
   }
 }

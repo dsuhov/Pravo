@@ -1,0 +1,82 @@
+.modal-6 {
+
+  &__container {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 920px;
+    margin: 0 auto;
+    background: $white;
+    border-radius: 8px;
+    padding: 40px 30px 30px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    z-index: 30;
+    top: -16px;
+    right: -34px;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  &__table {
+    width: 100%;
+    font-family: "UniNeueBook", sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    border-collapse: collapse;
+    margin-bottom: 28px;
+
+    td {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    td:first-child {
+      padding-left: 20px;
+    }
+
+    td:last-child {
+      box-sizing: border-box;
+      text-align: center;
+      width: 192px;
+    }
+
+    tr:nth-child(odd) td:first-child {
+      background: #dff2ff;
+    }
+
+    tr:nth-child(even) td:last-child {
+      background: #dff2ff;
+    }
+  }
+
+  &__bottom-text {
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 24px;
+  }
+
+  &__form {
+    display: flex;
+    padding-left: 10px;
+  }
+
+  &__phone {
+    width: 350px;
+    margin-right: 34px;
+
+    input {
+      padding: 26px 10px 26px 50px;
+    }
+  }
+
+  &__sbm-btn {
+    flex-grow: 1;
+  }
+}

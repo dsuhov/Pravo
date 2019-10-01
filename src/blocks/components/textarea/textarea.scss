@@ -1,0 +1,33 @@
+.textarea {
+  display: block;
+  width: 100%;
+  resize: none;
+  min-height: 140px;
+  color: $regent-gray;
+
+  box-sizing: border-box;
+  padding: 16px 10px 16px 30px;
+  outline: none;
+  border: none;
+  background: $catskill-white;
+  box-shadow: 0 0 10px 0 rgba(102, 145, 210, 0.3) inset;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 28px;
+
+  @include placeholder() {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: rgba($regent-gray, 0.8);
+  }
+
+  &:focus {
+    box-shadow: 0 0 10px 0 rgba(129, 164, 216, 0.6) inset;
+  }
+
+  @include breakpoint(mobile-m) {
+    font-size: 14px;
+    padding: 12px 10px 12px 30px;
+  }
+}

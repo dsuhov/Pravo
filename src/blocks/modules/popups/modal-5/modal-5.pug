@@ -1,0 +1,33 @@
+include ../../../components/simple-input/simple-input
+include ../inc/m-big-header/m-big-header
+include ../inc/m-subheader/m-subheader
+include ../inc/m-bold-subheader/m-bold-subheader
+include ../inc/m-subm-btn/m-subm-btn
+include ../../../components/choose-msngr/choose-msngr
+include ../../../components/accept/accept
+
+.popup#modal-5.modal-5
+  .modal-5__container
+    .modal-5__close-btn
+      include ../../../components/close-btn/close-btn
+    +m-big-header('Выберите удобный вариант<br />и время консультации', 'modal-5__header')
+    form(action="" method="post" id="modal-5-form").modal-5__form
+      p.modal-5__subtext Вам удобнее подъехать в офис или дома?
+      .modal-5__checks
+        input(type="radio" name="Куда удобнее подъехать?" value="В офис" id="to-office" checked).modal-5__checks-input
+        label(for="to-office").modal-5__checks-label В офис
+        input(type="radio" name="Куда удобнее подъехать?" value="Дома" id="to-home").modal-5__checks-input
+        label(for="to-home").modal-5__checks-label Дома
+      p.modal-5__subtext В какое время удобно получить консультацию?
+      .modal-5__form-inner
+        .modal-5__input
+          +simple-input('12.08.2020', 'number', 'modal-5_messenger')
+        .modal-5__delimeter.delimeter
+        .modal-5__input
+          +simple-input('Как вас зовут?', 'username', 'modal-5-form__name')
+        .modal-5__input
+          +simple-input('???', 'number', 'modal-5_messenger')
+        +m-subm-btn('modal-5__btn', 'Получить оценку перспектив','90')
+        +accept('modal-5', 'modal-5__accept')
+    .modal-5__right-block
+      include ../inc/right-block/right-block

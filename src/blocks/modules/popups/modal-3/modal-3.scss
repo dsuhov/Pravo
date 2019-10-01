@@ -1,5 +1,4 @@
-.modal-1 {
-  
+.modal-3 {
   &__container {
     position: relative;
     box-sizing: border-box;
@@ -7,7 +6,20 @@
     margin: 0 auto;
     background: $white;
     border-radius: 8px;
-    padding: 34px 50px 30px;
+    padding: 44px 50px 30px;
+  }
+
+  &__right-block {
+    position: absolute;
+    right: -4px;
+    bottom: 0;
+  }
+
+  &__close-btn {
+    position: absolute;
+    z-index: 30;
+    top: -16px;
+    right: -34px;
   }
 
   &__delimeter {
@@ -20,21 +32,12 @@
     max-width: 350px;
   }
 
+  &__textarea {
+    margin-bottom: 20px; 
+  }
+
   &__header {
-    margin-bottom: 14px;
-  }
-
-  &__subheader {
-    max-width: 420px;
     margin-bottom: 22px;
-  }
-
-  &__delimeter {
-    margin-bottom: 20px;
-  }
-
-  &__bold-subheader {
-    margin-bottom: 20px;
   }
 
   &__form-prompt {
@@ -52,18 +55,5 @@
   &__accept {
     margin-top: 3px;
     margin-left: 17px;
-  }
-
-  &__right-block {
-    position: absolute;
-    right: -4px;
-    bottom: 0;
-  }
-
-  &__close-btn {
-    position: absolute;
-    z-index: 30;
-    top: -16px;
-    right: -34px;
   }
 }

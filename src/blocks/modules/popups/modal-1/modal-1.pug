@@ -1,0 +1,28 @@
+include ../../../components/simple-input/simple-input
+include ../inc/m-big-header/m-big-header
+include ../inc/m-subheader/m-subheader
+include ../inc/m-bold-subheader/m-bold-subheader
+include ../inc/m-subm-btn/m-subm-btn
+include ../../../components/choose-msngr/choose-msngr
+include ../../../components/accept/accept
+
+// Давайте свяжемся и обсудим вашу ситуацию
+.popup#modal-1.modal-1
+  .modal-1__container
+    .modal-1__close-btn
+      include ../../../components/close-btn/close-btn
+    +m-big-header('Давайте свяжемся<br />и обсудим вашу ситуацию', 'modal-1__header')
+    +m-subheader('По итогам разговора вы получите первоначальный план действий, который поможет добиться результата.', 'modal-1__subheader')
+    .modal-1__delimeter.delimeter
+    +m-bold-subheader('Оставьте ваш номер и выберите удобный вариант<br />для связи. Я свяжусь с вами в течение 30-60 минут.', 'modal-1__bold-subheader')
+    form(action="" method="post" id="modal-1-form").modal-1__form
+      +simple-input('Как вас зовут?', 'username', 'modal-1-form__name')
+      p.modal-1__form-prompt.form-prompt Как вам удобно получить ответ?
+      .modal-1__choose-msngr
+        +choose-msngr('2')
+      .modal-1__input
+        +simple-input('Введите номер Телефона', 'number', 'modal-1_messenger')
+      +m-subm-btn('modal-1__btn', 'Обсудить ситуацию','90')
+      +accept('modal-1', 'modal-1__accept')
+    .modal-1__right-block
+      include ../inc/right-block/right-block

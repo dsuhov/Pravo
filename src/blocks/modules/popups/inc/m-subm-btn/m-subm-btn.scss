@@ -1,0 +1,49 @@
+.m-subm-btn {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  color: $white;
+  border-radius: 8px;
+  padding-bottom: 5px;
+
+  background: rgb(17, 57, 169);
+
+  @supports(background: linear-gradient(0deg, rgba(17,57,169,1) 0%, rgba(50,103,253,1) 100%)) {
+    background: linear-gradient(0deg, rgba(17,57,169,1) 0%, rgba(50,103,253,1) 100%);
+  }
+
+  &:hover {
+    background: rgb(30, 66, 167);
+
+    @supports(background: linear-gradient(0deg, rgb(30, 66, 167) 0%, rgb(83, 128, 253) 100%)) {
+      background: linear-gradient(0deg, rgb(30, 66, 167) 0%, rgb(83, 128, 253) 100%);
+    }
+  }
+
+  &__inner {
+    border-radius: 6px;
+    box-shadow: 0 0 15px 0 rgba(171, 224, 255, 0.4) inset;
+
+    &.m-subm-btn__inner {
+      &--90 {
+        padding: 31px 0 26px;
+      }
+
+      &--80 {
+        padding: 26px 0 21px;
+      }
+    }
+  }
+
+  &__top-text {
+    display: block;
+    font-family: "UniNeueRegular", sans-serif;
+    color: $white;
+    text-shadow: 0 0 1px rgba(18, 60, 160, 1);
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

@@ -1,0 +1,34 @@
+include ../../../components/simple-input/simple-input
+include ../inc/m-big-header/m-big-header
+include ../inc/m-subm-btn/m-subm-btn
+include ../../../components/close-btn/close-btn
+
+-
+  var tableData = [
+    ['Расторжение брака в случае согласия обоих супругов на развод', '15 000 руб'],
+    ['Расторжение брака и взыскание алиментов', '30 000 руб'],
+    ['Изменение размера взысканных алиментов', '40 000 руб'],
+    ['Раздел имущества при расторжении брака', '50 000 руб'],
+    ['Признание брака недействительным', '25 000 руб'],
+    ['Взыскание алиментов на содержание супруги', '25 000 руб'],
+    ['Определение места жительства и порядка общения с ребенком', '15 000 руб'],
+    ['Установление отцовства', '20 000 руб'],
+    ['Лишение родительских прав', '20 000 руб'],
+  ];
+
+.popup#modal-6.modal-6
+  .modal-6__container
+    .modal-6__close-btn
+      include ../../../components/close-btn/close-btn
+    +m-big-header('Ориентировочная стоимость услуг', 'modal-6__header')
+    table.modal-6__table
+      each val in tableData
+        tr
+          td= val[0]
+          td= val[1]
+    p.modal-6__bottom-text Помните, что стоимость услуг индивидуальна и сильно зависит от вашей  ситуации
+    form(action="" method="post").modal-6__form
+      .modal-6__phone
+        +simple-input('+7 (___) ___-__-__', 'telephone', 'modal-6_phone')
+      .modal-6__sbm-btn
+        +m-subm-btn('modal-6__sbm', 'Обсудить ситуацию и получить план действий', '80')
