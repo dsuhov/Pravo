@@ -2,4 +2,10 @@
   font-family: "UniNeueBook", sans-serif;
   font-size: 17px;
   line-height: 25px;
+
+  @include breakpoint(mobile-l) {
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+  }
 }

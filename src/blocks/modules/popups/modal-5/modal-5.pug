@@ -6,7 +6,7 @@ include ../inc/m-subm-btn/m-subm-btn
 include ../../../components/choose-msngr/choose-msngr
 include ../../../components/accept/accept
 
-.popup#modal-5.modal-5
+.popup#modal-5.modal-5.mfp-hide
   .modal-5__container
     .modal-5__close-btn
       include ../../../components/close-btn/close-btn
@@ -27,7 +27,7 @@ include ../../../components/accept/accept
           +simple-input('Как вас зовут?', 'username', 'modal-5-form__name')
         .modal-5__input
           +simple-input('???', 'number', 'modal-5_messenger')
-        +m-subm-btn('modal-5__btn', 'Получить оценку перспектив','90')
+        +m-subm-btn('modal-5__btn', 'Записатся на консультацию','90')
         +accept('modal-5', 'modal-5__accept')
     .modal-5__right-block
       include ../inc/right-block/right-block

@@ -7,7 +7,7 @@ include ../../../components/choose-msngr/choose-msngr
 include ../../../components/accept/accept
 include ../../../components/textarea/textarea
 
-.popup#modal-3.modal-3
+.popup#modal-3.modal-3.mfp-hide
   .modal-3__container
     .modal-3__close-btn
       include ../../../components/close-btn/close-btn
@@ -18,7 +18,7 @@ include ../../../components/textarea/textarea
       +simple-input('Как вас зовут?', 'username', 'modal-3-form__name')
       p.modal-3__form-prompt.form-prompt Как вам удобно получить ответ?
       .modal-3__choose-msngr
-        +choose-msngr('2')
+        +choose-msngr('4')
       .modal-3__input
         +simple-input('Введите номер Телефона', 'number', 'modal-3_messenger')
       +m-subm-btn('modal-3__btn', 'Получить оценку перспектив','90')

@@ -1,0 +1,17 @@
+
+include ../inc/m-subm-btn/m-subm-btn
+
+.popup#modal-7.modal-7.mfp-hide
+  .modal-7__container
+    .modal-7__close-btn
+      include ../../../components/close-btn/close-btn
+    p.modal-7__text
+      | Пройдите небольшой тест из 5 вопросов, чтобы<br/>получить 
+      span.modal-7__text-underlined оценку перспектив, план действий<br />и стоимость юридических услуг
+    .modal-7__pic-btn-block
+      button(type="submit" id=""+id).m-subm-btn.modal-7__btn
+        .m-subm-btn__inner(class="m-subm-btn__inner--90")
+          span.m-subm-btn__top-text Узнать стоимость и получить план действий
+      picture.modal-7__picture
+        source(srcset="" data-srcset="img/general/paper-and-arrow.webp" type="image/webp")
+        img(src="" data-src="img/general/paper-and-arrow.png").modal-7__img

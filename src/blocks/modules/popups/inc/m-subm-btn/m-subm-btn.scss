@@ -30,6 +30,10 @@
     &.m-subm-btn__inner {
       &--90 {
         padding: 31px 0 26px;
+
+        @include breakpoint(mobile-l) {
+          padding: 18px 0 16px;
+        }
       }
 
       &--80 {
@@ -45,5 +49,9 @@
     text-shadow: 0 0 1px rgba(18, 60, 160, 1);
     font-size: 18px;
     line-height: 28px;
+
+    @include breakpoint(mobile-l) {
+      font-size: 16px;
+    }
   }
 }

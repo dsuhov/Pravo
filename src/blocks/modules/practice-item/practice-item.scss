@@ -20,6 +20,10 @@
     padding-bottom: 2px;
   }
 
+  &__hidden {
+    display: none;
+  }
+
   &__delimeter {
     width: 100%;
     height: 1px;

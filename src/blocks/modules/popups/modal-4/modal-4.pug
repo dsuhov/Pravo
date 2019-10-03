@@ -6,7 +6,7 @@ include ../inc/m-subm-btn/m-subm-btn
 include ../../../components/choose-msngr/choose-msngr
 include ../../../components/accept/accept
 
-.popup#modal-4.modal-4
+.popup#modal-4.modal-4.mfp-hide
   .modal-4__container
     .modal-4__close-btn
       include ../../../components/close-btn/close-btn
@@ -19,10 +19,10 @@ include ../../../components/accept/accept
       +simple-input('Как вас зовут?', 'username', 'modal-4-form__name')
       p.modal-4__form-prompt.form-prompt Как вам удобно получить ответ?
       .modal-4__choose-msngr
-        +choose-msngr('2')
+        +choose-msngr('5')
       .modal-4__input
         +simple-input('Введите номер Телефона', 'number', 'modal-4_messenger')
-      +m-subm-btn('modal-4__btn', 'Получить оценку перспектив','90')
+      +m-subm-btn('modal-4__btn', 'Обсудить ситуацию','90')
       +accept('modal-4', 'modal-4__accept')
     .modal-4__right-block
       include ../inc/right-block/right-block

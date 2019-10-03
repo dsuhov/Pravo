@@ -1,0 +1,50 @@
+.header-thp {
+  position: relative;
+  min-height: 650px;
+
+  box-sizing: border-box;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $white;
+  overflow: hidden;
+
+  &__picture {
+    position: absolute;
+    width: 400px;
+    bottom: -90px;
+    right: 56.7%;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 55%;
+      left: 35%;
+      width: 797px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(126, 151, 233, 0.5) 0%, transparent 50%);
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+  }
+}
+
+.webp .header-thp {
+  
+  background-image: url("../img/general/bg-header-full_light.webp");
+
+  @include breakpoint(mobile-m) {
+    background-image: url("../img/general/bg-header-mobile_light.webp");
+  }
+}
+
+.no-webp .header-thp {
+  background-image: url("../img/general/bg-header-full_light.jpg");
+
+  @include breakpoint(mobile-m) {
+    background-image: url("../img/general/bg-header-mobile_light.jpeg");
+  }
+}

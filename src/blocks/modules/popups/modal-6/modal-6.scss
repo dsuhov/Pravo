@@ -8,6 +8,16 @@
     background: $white;
     border-radius: 8px;
     padding: 40px 30px 30px;
+
+    @media (max-width: 920px) {
+      max-width: 500px;
+      padding: 30px 30px;
+    }
+
+    @include breakpoint(mobile-l) {
+      max-width: 300px;
+      padding: 22px 10px;
+    }
   }
 
   &__close-btn {
@@ -15,14 +25,27 @@
     z-index: 30;
     top: -16px;
     right: -34px;
+
+    @include breakpoint(laptop) {
+      top: -33px;
+      right: initial;
+      left: calc(50% - 10px);
+    }
   }
 
   &__header {
     text-align: center;
     margin-bottom: 35px;
+
+    @include breakpoint(mobile-l) {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
   }
 
   &__table {
+    box-sizing: border-box;
     width: 100%;
     font-family: "UniNeueBook", sans-serif;
     font-size: 16px;
@@ -32,6 +55,7 @@
     margin-bottom: 28px;
 
     td {
+      box-sizing: border-box;
       padding-top: 12px;
       padding-bottom: 12px;
     }
@@ -44,6 +68,7 @@
       box-sizing: border-box;
       text-align: center;
       width: 192px;
+      padding-right: 0;
     }
 
     tr:nth-child(odd) td:first-child {
@@ -53,6 +78,37 @@
     tr:nth-child(even) td:last-child {
       background: #dff2ff;
     }
+
+    @media (max-width: 920px) {
+      width: calc(100% + 20px);
+      font-size: 13px;
+      line-height: 17px;
+      margin-left: -10px;
+      margin-right: -10px;
+      margin-bottom: 28px;
+
+      td:last-child {
+        width: 100px;
+      }
+    }
+
+    @include breakpoint(mobile-l) {
+      margin-bottom: 20px;
+
+      td:first-child {
+        padding-left: 10px;
+      }
+
+      td:last-child {
+        width: 77px;
+      }
+
+      td {
+        height: 50px;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
   }
 
   &__bottom-text {
@@ -60,11 +116,24 @@
     font-size: 18px;
     line-height: 25px;
     margin-bottom: 24px;
+
+    @include breakpoint(mobile-l) {
+      font-size: 13px;
+      line-height: 17px;
+      margin-bottom: 16px;
+    }
   }
 
   &__form {
     display: flex;
     padding-left: 10px;
+
+    @media (max-width: 920px) {
+      padding-left: 0;
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: 350px;
+    }
   }
 
   &__phone {
@@ -74,9 +143,32 @@
     input {
       padding: 26px 10px 26px 50px;
     }
+
+    @media (max-width: 920px) {
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint(mobile-l) {
+      width: 100%;
+      margin-bottom: 10px;
+
+      input {
+        padding: 12px 10px 12px 20px;
+      }
+    }
   }
 
   &__sbm-btn {
     flex-grow: 1;
+
+    @include breakpoint(mobile-l) {
+      .m-subm-btn__inner {
+        padding: 9px 28px;
+      }
+
+      .m-subm-btn__top-text {
+        line-height: 22px;
+      }
+    }
   }
 }

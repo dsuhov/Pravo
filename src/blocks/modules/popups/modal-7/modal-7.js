@@ -1,13 +1,5 @@
-modules.define('modal-7', ['i-bem-dom'], function(provide, bemDom) {
+import $ from "jquery";
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
-
-});
+if (window.matchMedia('(max-width: 1200px)').matches) {
+    $('.modal-7__text br').replaceWith(' ');
+}

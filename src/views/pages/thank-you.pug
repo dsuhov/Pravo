@@ -1,0 +1,13 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Право и Технологии";
+
+block content
+	include ../../blocks/modules/header/header-thp
+	include ../../blocks/modules/practice/practice-thp
+	include ../../blocks/modules/footer/footer
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

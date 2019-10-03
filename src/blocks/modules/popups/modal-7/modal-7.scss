@@ -1,0 +1,97 @@
+.modal-7 {
+
+  &__container {
+    box-sizing: border-box;
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+    background: $white;
+    border-radius: 8px;
+    padding: 54px 30px 66px 270px;
+
+    @media (max-width: 1200px) {
+      max-width: 700px;
+    }
+
+    @include breakpoint(laptop) {
+      max-width: 460px;
+      padding: 20px 10px;
+    }
+
+    @include breakpoint(mobile-l) {
+      max-width: 300px;
+      padding: 20px 10px 28px;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    z-index: 30;
+    top: -16px;
+    right: -34px;
+
+    @include breakpoint(mobile-xl) {
+      top: -33px;
+      right: initial;
+      left: calc(50% - 10px);
+    }
+  }
+
+  &__text {
+    font-family: "UniNeueBold", sans-serif;
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: 0.01em;
+    margin-bottom: 46px;
+
+    &-underlined {
+      border-bottom: 1px dashed #2e61f3;
+
+      @include breakpoint(mobile-l) {
+        border-bottom: none;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include breakpoint(laptop) {
+      text-align: center;
+    }
+
+    @include breakpoint(mobile-l) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    max-width: 442px;
+
+    @include breakpoint(mobile-l) {
+      .m-subm-btn__inner {
+        padding: 9px 36px 9px !important;
+      }
+
+      .m-subm-btn__top-text {
+        line-height: 22px;
+      }
+    }
+  }
+
+  &__pic-btn-block {
+    position: relative;
+  }
+
+  &__picture {
+    position: absolute;
+    top: -163px;
+    left: -419px;
+    width: 429px;
+
+    @include breakpoint(laptop) {
+      display: none;
+    }
+  }
+}

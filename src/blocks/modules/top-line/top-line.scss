@@ -51,7 +51,12 @@
 
     @include breakpoint(mobile-xl) {
       display: none;
-    } 
+    }
+
+    &.top-line__mail-link--light {
+      color: #6f9fee;
+      margin-right: 48px;
+    }
   }
 
   &__phone-link {
@@ -67,6 +72,10 @@
     text-decoration: none;
     margin-right: 20px;
 
+    &.top-line__phone-link--light {
+      color: $black;
+      margin-right: 20px;
+    }
   }
 
   &__logo-descr {
@@ -74,7 +83,9 @@
     color: $waterloo;
     font-size: 13px;
 
-    @include breakpoint(mobile-m) {
+    &.top-line__logo-descr--light {
+      color: $black;
+      margin-left: 8px;
     }
   }
 
@@ -87,11 +98,28 @@
     border: 1px solid rgba(37, 85, 222, 1);
     padding: 21px 21px;
     border-radius: 6px;
-    letter-spacing: 0.22px;
+    letter-spacing: 0.02em;
     text-shadow: 0px 1px 0px rgba(18, 60, 160, 1);
 
-    &:hover {
-      text-decoration: underline;
+    &.top-line__get-consult {
+      color: $mariner;
+      border: 2px solid rgba(37, 85, 222, 1);
+      padding: 21px 18px;
+      text-shadow: none;
+
+      @include breakpoint(mobile-m) {
+        border: none;
+        text-shadow: none;
+
+        &:hover {
+          background: transparent;
+          transform: scale(1);
+        }
+      }
+
+      &:hover {
+        color: $white;
+      }
     }
 
     @include breakpoint(laptop) {

@@ -14,7 +14,7 @@
     border-radius: 2px;
     box-shadow: 0 0 10px 0 rgba(102, 145, 210, 0.3) inset;
 
-    @include breakpoint(mobile-m) {
+    @include breakpoint(mobile-l) {
       top: 0;
     }
   }
@@ -46,7 +46,7 @@
       border-bottom: 1px solid $regent-gray;
     }
 
-    @include breakpoint(mobile-m) {
+    @include breakpoint(mobile-l) {
       padding-left: 20px;
       font-size: 11px;
       line-height: 14px;

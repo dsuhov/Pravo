@@ -3,9 +3,18 @@
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #2555de 50%, rgba(255, 255, 255, 0) 100%);
 }
 
+.popup {
+  padding: 0 10px;
+  padding-top: 30px;
+}
+
 .form-prompt {
   line-height: 28px;
   color: $regent-gray;
+
+  @include breakpoint(mobile-l) {
+    font-size: 12px;
+  }
 }
 
 @import "modal-1/modal-1";
@@ -14,4 +23,5 @@
 @import "modal-4/modal-4";
 @import "modal-5/modal-5";
 @import "modal-6/modal-6";
+@import "modal-7/modal-7";
 @import "inc/inc";

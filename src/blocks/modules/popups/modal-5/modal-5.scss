@@ -7,12 +7,26 @@
     background: $white;
     border-radius: 8px;
     padding: 34px 50px 30px;
+
+    @media (max-width: 920px) {
+      max-width: 500px;
+      padding: 30px 40px;
+    }
+
+    @include breakpoint(mobile-l) {
+      max-width: 300px;
+      padding: 22px 10px;
+    }
   }
 
   &__right-block {
     position: absolute;
     right: -4px;
     bottom: 0;
+
+    @media (max-width: 920px) {
+      display: none;
+    }
   }
 
   &__close-btn {
@@ -20,16 +34,22 @@
     z-index: 30;
     top: -16px;
     right: -34px;
+
+    @include breakpoint(laptop) {
+      top: -33px;
+      right: initial;
+      left: calc(50% - 10px);
+    }
   }
 
   &__delimeter {
     position: relative;
     left: -50px;
     max-width: 480px;
-  }
 
-  &__form {
-    
+    @include breakpoint(mobile-l) {
+      position: initial;
+    }
   }
 
   &__form-inner {
@@ -38,6 +58,10 @@
 
   &__header {
     margin-bottom: 30px;
+
+    @include breakpoint(mobile-l) {
+      margin-bottom: 15px;
+    }
   }
 
   &__subheader {
@@ -49,24 +73,39 @@
     margin-top: 26px;
     margin-bottom: 25px;
     position: initial;
-  }
 
+    @include breakpoint(mobile-l) {
+      margin-top: 14px;
+      margin-bottom: 14px;
+    }
+  }
+  
   &__subtext {
     font-family: "UniNeueBook", sans-serif;
     font-size: 20px;
     line-height: normal;
     margin-bottom: 10px;
+
+    @include breakpoint(mobile-l) {
+      text-align: center;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
   }
 
-  &__form-prompt {
-    margin: 13px 0 4px 0;
-  }
 
   /* CHECKS */
 
   &__checks {
     padding-left: 3px;
     margin-bottom: 25px;
+    
+    @include breakpoint(mobile-l) {
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
   }
 
   &__checks-input {
@@ -97,6 +136,21 @@
       border-radius: 50%;
       border: 1px solid #a3b8d8;
     }
+
+    @include breakpoint(mobile-l) {
+      font-size: 14px;
+      line-height: 18px;
+      padding-left: 23px;
+
+      &:first-of-type {
+        margin-right: 48px;
+      }
+
+      &::before {
+        width: 18px;
+        height: 18px;
+      }
+    }
   }
 
   &__checks-input:checked + &__checks-label {
@@ -104,13 +158,15 @@
       background: $mariner;
       box-shadow: 0 0 0 4px $white inset;
     }
+
+    @include breakpoint(mobile-l) {
+      &::before {
+        box-shadow: 0 0 0 3px $white inset;
+      }
+    }
   }
 
   /* CHECKS END */
-
-  &__choose-msngr {
-    margin-bottom: 10px;
-  }
 
   &__input {
     margin-bottom: 15px;
@@ -123,5 +179,10 @@
   &__accept {
     margin-top: 3px;
     margin-left: 17px;
+
+    @include breakpoint(mobile-l) {
+      margin-left: 0;
+      margin-top: 12px;
+    }
   }
 }

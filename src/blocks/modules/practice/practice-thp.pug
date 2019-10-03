@@ -1,0 +1,16 @@
+include ../../components/sect-header/sect-header
+include ../../components/sect-subheader/sect-subheader
+include ../../components/ctrl-arrow-2/ctrl-arrow-2
+
+.practice.practice--thp
+  .practice__slider-container-thp
+    .practice__controls
+      +ctrl-arrow-2('left', 'practice')
+      +ctrl-arrow-2('right', 'practice')
+    .practice__slider
+      .practice__slider-item
+        include ../practice-item/practice-item-1
+      .practice__slider-item
+        include ../practice-item/practice-item-2
+      .practice__slider-item
+        include ../practice-item/practice-item-3

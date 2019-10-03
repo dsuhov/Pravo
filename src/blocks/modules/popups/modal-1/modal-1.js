@@ -1,4 +1,5 @@
 import $ from "jquery";
+import magnificPopup from "magnific-popup";
 
 $(document).ready(function() {
   const cont = $('#modal-1-form');
@@ -11,4 +12,13 @@ $(document).ready(function() {
       msgrInput.attr('placeholder', `Введите номер  ${val}`)
     });
   }
+
+  if (window.matchMedia('(max-width: 920px)').matches) {
+    $('.modal-1__bold-subheader br').replaceWith(' ');
+  }
+
+  $('.top-line__get-consult').magnificPopup({
+    type:'inline',
+    closeBtnInside: true,
+  });
 })
