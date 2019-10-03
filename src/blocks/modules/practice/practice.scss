@@ -6,6 +6,10 @@
   &.practice--thp {
     padding: 0;
     margin-top: -108px;
+
+    @include breakpoint(mobile-m) {
+      margin-top: 0;
+    }
   }
 
   @include breakpoint(laptop) {

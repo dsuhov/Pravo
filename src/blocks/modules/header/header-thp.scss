@@ -9,6 +9,49 @@
   background-color: $white;
   overflow: hidden;
 
+  @include breakpoint(mobile-m) {
+    min-height: 708px;
+  }
+
+  &__title {
+    font-family: "UniNeueBold", sans-serif;
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: 0.01em;
+    margin-bottom: 27px;
+
+    @include breakpoint(mobile-xl) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+
+  &__main {
+    padding-left: 34.4%;
+    padding-top: 117px;
+
+    @include breakpoint(mobile-m) {
+      padding-left: 0;
+      padding-top: 12px;
+    }
+  }
+
+  &__back-link {
+    font-size: 16px;
+    color: $mariner;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__svg-arrow {
+    width: 15px;
+    height: 10px;
+    margin-right: 7px;
+  }
+
   &__picture {
     position: absolute;
     width: 400px;
@@ -28,6 +71,13 @@
       background-repeat: no-repeat;
       transform: translate(-50%, -50%);
       z-index: -1;
+    }
+
+    @include breakpoint(mobile-m) {
+      width: 219px;
+      right: 50%;
+      transform: translateX(57%);
+      bottom: -22px;
     }
   }
 }

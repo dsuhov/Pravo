@@ -6,6 +6,8 @@
 - var fallbackImg_mobile = 'img/general/two-persons-block_women-1_mobile.png';
 - var webpImg_mobile = 'img/general/two-persons-block_women-1_mobile.webp';
 
+include ../../components/sect-header/sect-header
+
 header.header.header-thp
   picture.header-thp__picture
     //- source(srcset=`${placeholder1_mobile}`, data-srcset=`${webpImg_mobile}, ${webpImg} 2x` type="image/webp" media="(max-width: 1024px)")
@@ -13,3 +15,10 @@ header.header.header-thp
     img.header__bg-img(src=`${placeholder1}` srcset=`${placeholder1_mobile} 2x` data-src=`${fallbackImg_mobile}` alt="Юлия Ковалева")
   .container.header__cont
     include ../top-line/top-line-light
+    .header-thp__main
+      .header-thp__title Мы получили вашу заявку<br />и скоро свяжемся с вами,<br />а пока предлагаем ознакомиться<br />с нашими успешными делами
+      a(href="/").header-thp__back-link
+        svg(class="header-thp__svg-arrow" xmlns="http://www.w3.org/2000/svg" width="15px" height="10px")
+          path(fill-rule="evenodd"  fill="rgb(37, 85, 222)"
+ d="M4.893,0.150 C5.104,-0.051 5.437,-0.051 5.649,0.150 C5.853,0.343 5.853,0.665 5.649,0.858 L1.816,4.486 L14.463,4.486 C14.758,4.486 15.000,4.707 15.000,4.987 C15.000,5.266 14.758,5.495 14.463,5.495 L1.816,5.495 L5.649,9.116 C5.853,9.316 5.853,9.638 5.649,9.831 C5.437,10.031 5.104,10.031 4.893,9.831 L0.153,5.344 C-0.051,5.151 -0.051,4.829 0.153,4.637 L4.893,0.150 Z")
+        span Вернуться на главную

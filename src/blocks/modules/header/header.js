@@ -17,5 +17,54 @@ $(document).ready(function() {
       }
     });
   }
-
+  
+  if (document.querySelector('.header-thp__title')) {
+    $('.header-thp__title br').replaceWith(' ');
+  }
+  
+  // Exit popup init
+  
+  // if (window.matchMedia('(min-width: 1024px)').matches) {
+  //   const element = document.createElement('script');
+  //   element.src = './js/ouibounce.min.js';
+  //   element.type = 'text/javascript';
+  //   document.head.appendChild(element);
+    
+  //   element.addEventListener('load', (evt) => {
+  //     ouibounce(document.getElementById('modal-7'), {
+  //       aggressive: true,
+  //       callback: function() {
+  //         $.magnificPopup.open({
+  //           items: {
+  //             src: '#modal-7',
+              
+  //           },
+  //           type: 'inline',
+  //           closeBtnInside: true,
+  //           callbacks: {
+  //             close: function() {
+                
+  //               setTimeout(() => {
+  //                 $.magnificPopup.open({
+  //                   items: {
+  //                     src: "#quiz",
+  //                   },
+  //                   type: 'inline'
+  //                 })
+  //               }, 100)
+  //             }
+  //           }
+  //         }, 0);
+  //       }
+        
+  //     })
+  //   })
+    
+  //   element.addEventListener('error', (evt) => {
+  //     console.log('can\'t load ouibounce');
+  //   })
+    
+  // }
+    
+  // Exit popup init end
 })

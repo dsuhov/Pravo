@@ -3,6 +3,10 @@
   align-items: center;
   padding-top: 24px;
 
+  &.top-line--light {
+    padding-top: 14px;
+  }
+
   @include breakpoint(laptop) {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -26,6 +30,10 @@
       padding-left: 13px;
       margin-bottom: 22px;
     }
+
+    &.top-line__logo-block--light {
+      padding-left: 2px;
+    }
   }
 
   &__picture {
@@ -36,6 +44,15 @@
       width: 140px;
       margin-right: 18px;
       flex-shrink: 0;
+    }
+  }
+
+  &--light {
+    .top-line__picture {
+      @include breakpoint(mobile-m) {
+        width: 149px;
+        margin-right: 10px;
+      }
     }
   }
 
@@ -63,7 +80,7 @@
     @include breakpoint(mobile-xl) {
       font-size: 18px;
       margin-right: 0px;
-      margin-bottom: 19px;
+      margin-bottom: 0;
     }
 
     font-family: "UniNeueBold", sans-serif;
@@ -75,6 +92,11 @@
     &.top-line__phone-link--light {
       color: $black;
       margin-right: 20px;
+
+      @include breakpoint(mobile-m) {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
     }
   }
 

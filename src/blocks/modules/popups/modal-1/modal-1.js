@@ -18,7 +18,10 @@ $(document).ready(function() {
   }
 
   $('.top-line__get-consult').magnificPopup({
-    type:'inline',
     closeBtnInside: true,
+    items: {
+      src: '#modal-1',
+      type:'inline'
+    }
   });
 })

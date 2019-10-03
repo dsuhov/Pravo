@@ -5,6 +5,7 @@ import "./import/modules";
 import "./import/components";
 
 import "%modules%/quiz/quiz";
+import "%modules%/two-persons/two-persons";
 import "%modules%/popups/modal-1/modal-1";
 import "%modules%/popups/modal-2/modal-2";
 import "%modules%/popups/modal-3/modal-3";

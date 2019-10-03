@@ -19,11 +19,14 @@ $(document).ready(function() {
     $('.modal-2__bold-subheader br').replaceWith(' ');
   }
   
-  $('#header-btn').magnificPopup({
-    closeBtnInside: true,
-    items: {
-      src: '#modal-2',
-      type:'inline',
+  if (document.querySelector('#header-btn')) {
+    $('#header-btn').magnificPopup({
+      closeBtnInside: true,
+      items: {
+        src: '#modal-2',
+        type:'inline',
+    }
+    });
   }
-  });
+  
 })
