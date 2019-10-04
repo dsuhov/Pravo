@@ -25,4 +25,14 @@ $(document).ready(function() {
     }
   });
 
+  if (document.querySelector('.s-price__get-prices')) {
+    $('.s-price__get-prices').magnificPopup({
+      closeBtnInside: true,
+      items: {
+        src: '#modal-6',
+        type:'inline'
+      }
+    });
+  }
+
 })

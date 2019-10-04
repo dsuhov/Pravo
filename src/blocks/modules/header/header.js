@@ -23,8 +23,9 @@ $(document).ready(function() {
   }
   
   // Exit popup init
+  // отменить на странице благодарности и на странице квиза
   
-  // if (window.matchMedia('(min-width: 1024px)').matches) {
+  // if (window.matchMedia('(min-width: 1024px)').matches && document.querySelector('.what-situation')) {
   //   const element = document.createElement('script');
   //   element.src = './js/ouibounce.min.js';
   //   element.type = 'text/javascript';
@@ -40,7 +41,7 @@ $(document).ready(function() {
               
   //           },
   //           type: 'inline',
-  //           closeBtnInside: true,
+  //           closeBtnInside: false,
   //           callbacks: {
   //             close: function() {
                 
@@ -64,6 +65,30 @@ $(document).ready(function() {
   //     console.log('can\'t load ouibounce');
   //   })
     
+  // } else if (document.querySelector('.what-situation')) {
+  //   setTimeout(() => {
+  //     $.magnificPopup.open({
+  //       items: {
+  //         src: '#modal-7',
+          
+  //       },
+  //       type: 'inline',
+  //       closeBtnInside: false,
+  //       callbacks: {
+  //         close: function() {
+            
+  //           setTimeout(() => {
+  //             $.magnificPopup.open({
+  //               items: {
+  //                 src: "#quiz",
+  //               },
+  //               type: 'inline'
+  //             })
+  //           }, 100)
+  //         }
+  //       }
+  //     }, 0);
+  //   }, 20000)
   // }
     
   // Exit popup init end

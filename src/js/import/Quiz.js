@@ -15,7 +15,7 @@ class Quiz {
     this.blocks = this.rootNode.find(".q-block");
     
     this.currStep = 0;
-    this.testLength = 4;
+    this.testLength = 3;
     this.timeoutID = null;
     
     this.run();
