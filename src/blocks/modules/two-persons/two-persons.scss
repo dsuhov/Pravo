@@ -342,6 +342,12 @@
       position: relative;
       bottom: initial;
     }
+
+    @include breakpoint(mobile-xl) {
+      & * {
+        text-align: center;
+      }
+    }
   }
 
   &__women-1 &__picture {

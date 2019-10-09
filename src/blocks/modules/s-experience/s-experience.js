@@ -6,7 +6,7 @@ $(document).ready(function() {
     elements_selector: '.s-experience__rounds',
   
     callback_enter: function(el) {
-      el.classList.add('animated')
+      el.classList.add('animated');
     }
   });
   

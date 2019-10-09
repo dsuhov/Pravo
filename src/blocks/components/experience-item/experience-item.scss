@@ -42,11 +42,11 @@
     font-family: "UniNeueBold", sans-serif;
     font-size: 18px;
     line-height: 22px;
-    cursor: pointer;
+    // cursor: pointer;
 
-    &:hover {
-      text-decoration: underline;
-    }
+    // &:hover {
+    //   text-decoration: underline;
+    // }
 
     @include breakpoint(tablet) {
       font-size: 16px;
@@ -70,7 +70,7 @@
   }
 
   &__practice-years {
-    text-decoration: underline;
+    // text-decoration: underline;
     text-decoration-color: $mariner;
   }
 

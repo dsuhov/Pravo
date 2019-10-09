@@ -123,13 +123,20 @@
     letter-spacing: 0.02em;
     text-shadow: 0px 1px 0px rgba(18, 60, 160, 1);
 
+   
+
     &.top-line__get-consult {
       color: $mariner;
       border: 2px solid rgba(37, 85, 222, 1);
       padding: 21px 18px;
       text-shadow: none;
 
+      @media (max-width: 900px) {
+        margin-top: 20px;
+      }
+
       @include breakpoint(mobile-m) {
+        margin-top: 0;
         border: none;
         text-shadow: none;
 

@@ -11,6 +11,7 @@ class Quiz {
     this.scaleItemsPimp = this.rootNode.find(".progress__pimp");
     this.scaleItemsStrip = this.rootNode.find(".progress__strip");
     this.scaleItemsTitles  = this.rootNode.find(".progress__title");
+    this.cases = this.rootNode.find(".quiz-cases__case");
 
     this.blocks = this.rootNode.find(".q-block");
     
@@ -41,6 +42,8 @@ class Quiz {
   run() {
     this.showBlock();
     this.events();
+    this.cases.hide();
+    $(this.cases[0]).show();
   }
   
   stepNext() {
@@ -55,6 +58,7 @@ class Quiz {
     } else {
       this.showBlock();
       this.updateStepScale(this.currStep);
+      this.updateCases(this.currStep);
       this.checkPrevBtnInterval();
     }
   }
@@ -65,6 +69,7 @@ class Quiz {
       this.showBlock();
       this.reduceProgress();
       this.checkPrevBtnInterval();
+      this.updateCases(this.currStep);
     }
   }
   
@@ -101,6 +106,11 @@ class Quiz {
 
     $(this.scaleItemsStrip[this.currStep-1]).addClass('progress__strip--active');
     
+  }
+
+  updateCases(currStep) {
+    $(this.cases).hide();
+    $(this.cases[currStep]).show();
   }
   
   checkPrevBtnInterval() {
