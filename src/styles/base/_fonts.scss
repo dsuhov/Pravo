@@ -1,35 +1,41 @@
 @font-face {
   font-family: "UniNeueLight";
-  src: url("../fonts/UniNeueLight.woff2") format("woff2");
+  src: url("../fonts/UniNeueLight.woff2") format("woff2"),
+      url('../fonts/subset-UniNeueLight.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
   font-family: "UniNeueRegular";
-  src: url("../fonts/UniNeueRegular.woff2") format("woff2");
+  src: url("../fonts/UniNeueRegular.woff2") format("woff2"),
+      url('../fonts/subset-UniNeueRegular.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
   font-family: "UniNeueBook";
-  src: url("../fonts/UniNeueBook.woff2") format("woff2");
+  src: url("../fonts/UniNeueBook.woff2") format("woff2"),
+      url('../fonts/subset-UniNeueBook.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
   font-family: "UniNeueBold";
-  src: url("../fonts/UniNeueBold.woff2") format("woff2");
+  src: url("../fonts/UniNeueBold.woff2") format("woff2"),
+      url('../fonts/subset-UniNeueBold.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
   font-family: "UniNeueHeavy";
-  src: url("../fonts/UniNeueHeavy.woff2") format("woff2");
+  src: url("../fonts/UniNeueHeavy.woff2") format("woff2"),
+      url('../fonts/subset-UniNeueHeavy.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
   font-family: "YesevaOne";
-  src: url("../fonts/YesevaOne-Regular.woff2") format("woff2");
+  src: url("../fonts/YesevaOne-Regular.woff2") format("woff2"),
+      url('../fonts/subset-YesevaOne-Regular.woff') format('woff');
   font-display: swap;
 }

@@ -9,10 +9,10 @@ include ../../components/simple-input/simple-input
 - var spvTitle2 = '<span class="s-price__smaller">Если Вы пока не готовы к такому шагу, то</span><br/>Вы можете получить бесплатную<br/>консультацию по телефону';
 
 - var sugg1 = 'Выберите место и удобное время консультации';
-- var sugg2 = '&nbsp;Оставьте ваш телефон - мы перезвоним Вам<br/>и бесплатно проконсультируем&nbsp;';
+- var sugg2 = '&nbsp;Оставьте Ваш телефон - мы перезвоним Вам<br/>и бесплатно проконсультируем&nbsp;';
 
 - var descr1 = 'В ходе консультации мы оценим перспективы,<br/>составим первоначальный план действий<br/><b>и рассчитаем точную стоимость услуг.</b>';
-- var descr2 = 'В ходе такой консультации вы получите первоначальный план действий для увеличения шансов, но мы не сможем на 100% оценить ваши перспективы.';
+- var descr2 = 'В ходе такой консультации Вы получите первоначальный план действий для увеличения шансов, но мы не сможем на 100% оценить Ваши перспективы.';
 
 - var plshldrLeft = 'data:image/gif;base64,R0lGODlhNwA7AIAAAP///wAAACH5BAEAAAEALAAAAAA3ADsAAAI8jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1EQBADs=';
 - var imgLeftwebp = 'img/general/s-price-pic-1.webp';
@@ -32,7 +32,7 @@ include ../../components/simple-input/simple-input
     .s-price__subheader
       +sect-subheader('Чтобы уточнить стоимость, нужно детально ознакомиться с ситуацией')
     .s-price__delimeter
-    .s-price__vars-title Предлагаем вам <span class="text-back">&nbsp;2 варианта&nbsp;</span>
+    .s-price__vars-title Предлагаем Вам <span class="text-back">&nbsp;2 варианта&nbsp;</span>
     .s-price__variants
       .s-price__var-block
         .s-price__var-block__inner
@@ -52,14 +52,14 @@ include ../../components/simple-input/simple-input
           h3.s-price__vb-header!= spvTitle2
           picture.s-price__vb-pic.s-price__vb-pic--right
             source(srcset=`${plshldrRight}`, data-srcset=`${imgRightwebp}` type="image/webp")
-            img.header__bg-img(src=`${plshldrRight}` data-src=`${imRighttPng}`)
+            img.header__bg-img(src=`${plshldrRight}` data-src=`${imgRightPng}`)
           p.s-price__description!= descr2
           .s-price__suggestion
             span.text-back!= sugg2
-          form.s-price__form
+          form(method="post" action="./sendmail/send.php").s-price__form
             .s-price__input
               +simple-input('Введите номер телефона', 'number', 's-price_phone')
             .s-price__button-wrapper
-              +blue-btn-subm('s-price__btn-2', 'Заказать консультацию', '', 's-price__button-2')
+              +blue-btn-subm('s-price__btn-2', 'Заказать консультацию', '', 's-price__button-2', 'Заказать консультацию')
     .s-price__get-prices-wrapper
       a(href="").s-price__get-prices И все таки хочу знать ориентировочные цены

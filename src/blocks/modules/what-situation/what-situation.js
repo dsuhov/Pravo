@@ -1,13 +1,6 @@
 import $ from 'jquery';
 import slick from "slick-carousel";
 
-$('.practice-item__descr-more').on('click', (evt) => {
-  let descrBlock = $(evt.target).parent('.practice-item__descr');
-  descrBlock.find('.practice-item__hidden').show();
-  descrBlock.find('.practice-item__dots, .practice-item__descr-more').remove();
-})
-
-
 if (window.matchMedia('(max-width: 1110px)').matches) {
   const sliderContainer = document.querySelector('.what-situation__cases');
   

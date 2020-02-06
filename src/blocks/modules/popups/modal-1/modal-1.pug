@@ -15,14 +15,14 @@ include ../../../components/accept/accept
     +m-subheader('По итогам разговора Вы получите первоначальный план действий, который поможет добиться результата.', 'modal-1__subheader')
     .modal-1__delimeter.delimeter
     +m-bold-subheader('Оставьте ваш номер и выберите удобный вариант<br />для связи. Я свяжусь с Вами в течение 30-60 минут.', 'modal-1__bold-subheader')
-    form(action="" method="post" id="modal-1-form").modal-1__form
+    form(action="./sendmail/send.php" method="post" id="modal-1-form").modal-1__form
       +simple-input('Как вас зовут?', 'username', 'modal-1-form__name')
       p.modal-1__form-prompt.form-prompt Как Вам удобно получить ответ?
       .modal-1__choose-msngr
         +choose-msngr('2')
       .modal-1__input
         +simple-input('Введите номер Телефона', 'number', 'modal-1_messenger')
-      +m-subm-btn('modal-1__btn', 'Обсудить ситуацию','90')
+      +m-subm-btn('modal-1__btn', 'Обсудить ситуацию','90', 'Обсудить ситуацию')
       +accept('modal-1', 'modal-1__accept')
     .modal-1__right-block
       include ../inc/right-block/right-block

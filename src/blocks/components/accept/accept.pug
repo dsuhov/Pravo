@@ -1,6 +1,6 @@
 mixin accept(id, extraClass)
   .accept(class=""+extraClass)
-    input(type="checkbox" id=`accept-riles-${id}` checked).accept__input
+    input(type="checkbox" id=`accept-riles-${id}` name="accept_confidentiality" checked).accept__input
     label(for=`accept-riles-${id}`).accept__label Согласен с <u>Политикой конфиденциальности сайта</u>
       .accept__checkbox
         svg(class="accept__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 6")

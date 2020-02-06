@@ -1,10 +1,10 @@
-mixin blue-btn-subm(id, text1, text2, extraClass)
+mixin blue-btn-subm(id, text1, text2, extraClass, value)
   if text2
-    button(type="submit" id=""+id).blue-btn
+    button(type="submit" id=""+id name="reason" value=""+value).blue-btn
       .blue-btn__inner
         span.blue-btn__top-text #{text1}
         span.blue-btn__bottom-text #{text2}
   else
-    button(type="submit" id=""+id).blue-btn
+    button(type="submit" id=""+id name="reason" value=""+value).blue-btn
       .blue-btn__inner(class=""+extraClass)
         span.blue-btn__top-text #{text1}

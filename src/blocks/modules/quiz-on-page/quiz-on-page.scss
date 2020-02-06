@@ -1,0 +1,20 @@
+.quiz-on-page {
+  //background-color: rgba(#eee, 0.5);
+  padding: 60px 0 20px;
+
+  @media (max-width: 375px) {
+    padding: 30px 0 20px;
+  }
+
+  &__title {
+    padding: 0 15px;
+    max-width: 1110px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 60px;
+
+    @media (max-width: 576px) {
+      margin-bottom: 30px;
+    }
+  }
+}

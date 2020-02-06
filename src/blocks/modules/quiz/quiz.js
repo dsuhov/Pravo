@@ -7,5 +7,11 @@ $(document).ready(function() {
     
     const quizMain = new Quiz("#quiz");
   }
+
+  if (document.querySelector("#quiz2")) {
+
+    const quizMain2 = new Quiz("#quiz2");
+    console.log(document.querySelector("#quiz2"));
+  }
   
 });

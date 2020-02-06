@@ -16,25 +16,25 @@ include ../../components/accept/accept
       .form-1__row
         .form-1__col.form-1__col-1
           h3.form-1__title Получите честную оценку <br />перспектив
-          p.form-1__text Давайте свяжемся и обсудим вашу ситуацию. <br /><b class="text-back">По итогам разговора Вы получите оценку <br />перспектив, а также первоначальный план <br />действий,</b> которые помогут добиться результата.
+          p.form-1__text Давайте свяжемся и обсудим Вашу ситуацию. <br /><b class="text-back">По итогам разговора Вы получите оценку <br />перспектив, а также первоначальный план <br />действий,</b> которые помогут добиться результата.
           .form-1__notice
             .form-1__notice-inner
               img(src="", data-src="img/general/form-1-w1.png" alt="Смело оставляйте заявку!").form-1__notice-pic
               p.form-1__notice-text Смело оставляйте заявку на консультацию! <br />Иногда для решения сложной проблемы <br />достаточно одного разговора с юристом!
         .form-1__col.form-1__col-2
-          form.form-1__form(action="" method="post" id="form-1")
+          form.form-1__form(action="./sendmail/send.php" method="post" id="form-1")
             .form-1__input
-              +simple-input('Как вас зовут?', 'username', 'form-1-name')
+              +simple-input('Как Вас зовут?', 'username', 'form-1-name')
             .form-1__label Как Вам удобно получить ответ?
             .form-1__choose-msngr
               +choose-msngr('1')
             .form-1__input
               +simple-input('Введите номер Телефона', 'number', 'form-1-messenger')
-            +blue-btn-subm('form-1__btn', 'Получить оценку перспектив', '', 'form-1__btn-p')
+            +blue-btn-subm('form-1__btn', 'Получить оценку перспектив', '', 'form-1__btn-p', 'Получить оценку перспектив')
             +accept('1', 'form-1__accept')
     .form-1__advantages
       .form-1__advantage
-        +advantage('Возьмем на себя все хлопоты, <br /><b>избавим вас от лишних встреч <br />с супругой(ом)</b> и походов в суд')
+        +advantage('Возьмем на себя все хлопоты, <br /><b>избавим Вас от лишних встреч <br />с супругой(ом)</b> и походов в суд')
       .form-1__advantage
         +advantage('<b>Храним адвокатскую тайну.</b><br />Все, что Вы нам скажете,<br />останется тайной для всех')
       .form-1__advantage

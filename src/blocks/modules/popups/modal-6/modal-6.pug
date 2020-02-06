@@ -26,8 +26,8 @@ include ../inc/m-subm-btn/m-subm-btn
           td= val[0]
           td= val[1]
     p.modal-6__bottom-text Помните, что стоимость услуг индивидуальна и сильно зависит от вашей ситуации
-    form(action="" method="post").modal-6__form
+    form(action="./sendmail/send.php" method="post").modal-6__form
       .modal-6__phone
-        +simple-input('+7 (___) ___-__-__', 'telephone', 'modal-6_phone')
+        +simple-input('+7 (___) ___-__-__', 'number', 'modal-6_phone')
       .modal-6__sbm-btn
-        +m-subm-btn('modal-6__sbm', 'Обсудить ситуацию и получить план действий', '80')
+        +m-subm-btn('modal-6__sbm', 'Обсудить ситуацию и получить план действий', '80', 'Попап с ценами')

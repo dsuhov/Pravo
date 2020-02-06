@@ -1,0 +1,40 @@
+.quiz-cases {
+
+  &__head, &__c-block-text {
+    font-family: "UniNeueBook", sans-serif;
+  }
+
+  &__head {
+    margin-bottom: 5px;
+  }
+
+  &__c-title, &__c-block-title {
+    font-family: "UniNeueBold", sans-serif;
+  }
+
+  &__c-title {
+    font-size: 16px;
+    line-height: 19px;
+    // margin-bottom: 5px;
+  }
+
+  &__main {
+    padding-top: 19px;
+  }
+
+  &__c-block {
+
+    &:first-child {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__c-block-title {
+    margin-bottom: 8px;
+  }
+
+  &__c-block-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

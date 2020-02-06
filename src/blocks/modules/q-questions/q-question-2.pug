@@ -1,0 +1,36 @@
+include ../../components/q-block/q-block
+
+-
+    var questions = [
+    {
+    title: 'У Вас есть несовершеннолетние дети?',
+    id1: 's1-q1-2',
+    id2: 's1-q2-2'
+    },
+    {
+    title: 'Есть ли имущество, полученное во время брака?',
+    id1: 's2-q1-2',
+    id2: 's2-q2-2'
+    },
+    {
+    title: 'Согласен ли на развод супруг(а)?',
+    id1: 's3-q1-2',
+    id2: 's3-q2-2'
+    },
+    {
+    title: 'Необходимо решить, с кем будет жить ребенок (дети)?',
+    id1: 's4-q1-2',
+    id2: 's4-q2-2'
+    },
+    //- {
+    //-   title: 'Необходимо лишить родительских прав супруга(у)?',
+    //-   id1: 's5-q1',
+    //-   id2: 's5-q2'
+    //- }
+    ];
+
+form(action="./sendmail/send.php" method="post" id="quiz-form-2").q-form.quiz__form
+    .quiz__form-questions
+        each val, index in questions
+            +q-block(val, index)
+    include ../q-last-block/q-last-block2

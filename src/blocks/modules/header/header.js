@@ -32,8 +32,9 @@ $(document).ready(function() {
     document.head.appendChild(element);
     
     element.addEventListener('load', (evt) => {
+      
       ouibounce(document.getElementById('modal-7'), {
-        aggressive: true,
+        // aggressive: true,
         callback: function() {
           $.magnificPopup.open({
             items: {
@@ -42,53 +43,54 @@ $(document).ready(function() {
             },
             type: 'inline',
             closeBtnInside: false,
-            callbacks: {
-              close: function() {
-                
-                setTimeout(() => {
-                  $.magnificPopup.open({
-                    items: {
-                      src: "#quiz",
-                    },
-                    type: 'inline'
-                  })
-                }, 100)
-              }
-            }
           }, 0);
         }
         
       })
-    })
+    });
+
+    $('#modal-7 button').click((e) => {
+      // console.log('header.js 53 Step 1');
+      
+      
+      setTimeout(() => {
+        $.magnificPopup.open({
+          items: {
+            src: "#quiz",
+          },
+          type: 'inline'
+        })
+      }, 100)
+    });
     
     element.addEventListener('error', (evt) => {
       console.log('can\'t load ouibounce');
     })
     
   } else if (document.querySelector('.what-situation')) {
-    setTimeout(() => {
-      $.magnificPopup.open({
-        items: {
-          src: '#modal-7',
+    // setTimeout(() => {
+    //   $.magnificPopup.open({
+    //     items: {
+    //       src: '#modal-7',
           
-        },
-        type: 'inline',
-        closeBtnInside: false,
-        callbacks: {
-          close: function() {
+    //     },
+    //     type: 'inline',
+    //     closeBtnInside: false,
+    //     callbacks: {
+    //       close: function() {
             
-            setTimeout(() => {
-              $.magnificPopup.open({
-                items: {
-                  src: "#quiz",
-                },
-                type: 'inline'
-              })
-            }, 100)
-          }
-        }
-      }, 0);
-    }, 20000)
+    //         setTimeout(() => {
+    //           $.magnificPopup.open({
+    //             items: {
+    //               src: "#quiz",
+    //             },
+    //             type: 'inline'
+    //           })
+    //         }, 100)
+    //       }
+    //     }
+    //   }, 0);
+    // }, 20000)
   }
     
   // Exit popup init end
@@ -111,7 +113,10 @@ function inputmaskInit() {
   document.head.appendChild(element);
 
   element.addEventListener('load', (evt) => {
-    var im = new Inputmask("+7(999)999-99-99");
+    var im = new Inputmask({
+      mask: "+7(999)999-99-99",
+      clearIncomplete: true
+    });
     console.log();
     
     im.mask(document.querySelectorAll('input[name="number"]'));

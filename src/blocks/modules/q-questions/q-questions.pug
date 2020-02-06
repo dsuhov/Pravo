@@ -29,7 +29,7 @@ include ../../components/q-block/q-block
     //- }
   ];
 
-form(action="" method="post" id="quiz-form").q-form.quiz__form
+form(action="./sendmail/send.php" method="post" id="quiz-form").q-form.quiz__form
   .quiz__form-questions
     each val, index in questions
       +q-block(val, index)
