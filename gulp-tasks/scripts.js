@@ -29,3 +29,8 @@ gulp.task("scripts", () => {
         }))
         .on("end", browsersync.reload);
 });
+
+gulp.task("copyLocalScript", () => {
+    return gulp.src(['./src/js/*.js', '!./src/js/index.js'])
+        .pipe(gulp.dest('./dist/js/'));
+});

@@ -5,6 +5,9 @@ import "./import/modernizr-custom";
 import "./import/modules";
 import "./import/components";
 
+import $ from "jquery";
+import magnificPopup from "magnific-popup";
+
 import "%modules%/quiz/quiz";
 import "%modules%/two-persons/two-persons";
 import "%modules%/popups/modal-1/modal-1";
@@ -27,7 +30,10 @@ Modernizr.on('webp', function(result) {
 new LazyLoad();
 
 // code for Yandex Metrika
-document.addEventListener('DOMContentLoaded', ymGoals);
+document.addEventListener('DOMContentLoaded', () => {
+  ymGoals();
+  phoneBtnActions();
+});
 
 function ymGoals() {
   const fastForms = document.querySelectorAll('.fast-form__form');
@@ -183,4 +189,26 @@ function ymGoals() {
   chooseTimePlaceBtn.addEventListener('click', chooseTimePlaceHandler);
   orderConsultBtn.addEventListener('click', orderConsultHandler);
   wantToKnowPricesBtn.addEventListener('click', wantToKnowPricesHandler);
+}
+
+function phoneBtnActions() {
+  const phoneBtns = [...document.querySelectorAll('.top-line__phone-link, .footer__phone-link')];
+
+  const phoneBtnHandler = (evt) => {
+    evt.preventDefault();
+
+    $.magnificPopup.open({
+      items: {
+        src: "#modal-1-phone"
+      },
+      type: "inline",
+      closeBtnInside: false
+    });
+  }
+
+  if (window.matchMedia('(min-width: 769px)').matches) {
+    phoneBtns.forEach(el => {
+      el.addEventListener('click', phoneBtnHandler);
+    });
+  }
 }

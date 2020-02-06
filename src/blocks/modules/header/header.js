@@ -2,83 +2,81 @@ import $ from "jquery";
 import magnificPopup from "magnific-popup";
 
 $(document).ready(function() {
-  
-  if (window.matchMedia('(max-width: 375px)').matches) {
-    $('.top-line__logo-descr br').remove();
-    $('.header-qp__par-3 br').replaceWith(' ');
+  if (window.matchMedia("(max-width: 375px)").matches) {
+    $(".top-line__logo-descr br").remove();
+    $(".header-qp__par-3 br").replaceWith(" ");
   }
-  
-  if (document.querySelector('#header-qp-btn')) {
-    $('#header-qp-btn').magnificPopup({
+
+  if (document.querySelector("#header-qp-btn")) {
+    $("#header-qp-btn").magnificPopup({
       closeBtnInside: true,
       items: {
-        src: '#quiz',
-        type:'inline'
+        src: "#quiz",
+        type: "inline"
       }
     });
   }
-  
-  if (document.querySelector('.header-thp__title')) {
-    $('.header-thp__title br').replaceWith(' ');
+
+  if (document.querySelector(".header-thp__title")) {
+    $(".header-thp__title br").replaceWith(" ");
   }
-  
+
   // Exit popup init
   // отменить на странице благодарности и на странице квиза
-  
-  if (window.matchMedia('(min-width: 1024px)').matches && document.querySelector('.what-situation')) {
-    const element = document.createElement('script');
-    element.src = './js/ouibounce.min.js';
-    element.type = 'text/javascript';
+
+  if (
+    window.matchMedia("(min-width: 1024px)").matches &&
+    document.querySelector(".what-situation")
+  ) {
+    const element = document.createElement("script");
+    element.src = "./js/ouibounce.min.js";
+    element.type = "text/javascript";
     document.head.appendChild(element);
-    
-    element.addEventListener('load', (evt) => {
-      
-      ouibounce(document.getElementById('modal-7'), {
+
+    element.addEventListener("load", evt => {
+      ouibounce(document.getElementById("modal-7"), {
         // aggressive: true,
         callback: function() {
-          $.magnificPopup.open({
-            items: {
-              src: '#modal-7',
-              
+          $.magnificPopup.open(
+            {
+              items: {
+                src: "#modal-7"
+              },
+              type: "inline",
+              closeBtnInside: false
             },
-            type: 'inline',
-            closeBtnInside: false,
-          }, 0);
+            0
+          );
         }
-        
-      })
+      });
     });
 
-    $('#modal-7 button').click((e) => {
+    $("#modal-7 button").click(e => {
       // console.log('header.js 53 Step 1');
-      
-      
+
       setTimeout(() => {
         $.magnificPopup.open({
           items: {
-            src: "#quiz",
+            src: "#quiz"
           },
-          type: 'inline'
-        })
-      }, 100)
+          type: "inline"
+        });
+      }, 100);
     });
-    
-    element.addEventListener('error', (evt) => {
-      console.log('can\'t load ouibounce');
-    })
-    
-  } else if (document.querySelector('.what-situation')) {
+
+    element.addEventListener("error", evt => {
+      console.log("can't load ouibounce");
+    });
+  } else if (document.querySelector(".what-situation")) {
     // setTimeout(() => {
     //   $.magnificPopup.open({
     //     items: {
     //       src: '#modal-7',
-          
     //     },
     //     type: 'inline',
     //     closeBtnInside: false,
     //     callbacks: {
     //       close: function() {
-            
     //         setTimeout(() => {
     //           $.magnificPopup.open({
     //             items: {
@@ -92,33 +90,33 @@ $(document).ready(function() {
     //   }, 0);
     // }, 20000)
   }
-    
+
   // Exit popup init end
 
-  if (window.matchMedia('(max-width: 768px)').matches) {
-    setTimeout(inputmaskInit, 5000)
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    setTimeout(inputmaskInit, 5000);
   } else {
     inputmaskInit();
   }
 
   // form fix
-  $('input[name="number"]').attr('required', 'required');
-})
+  $('input[name="number"]').attr("required", "required");
+});
 
 function inputmaskInit() {
-  $('input[name="number"]').attr('required');
-  const element = document.createElement('script');
-  element.src = './js/inputmask.min.js';
-  element.type = 'text/javascript';
+  $('input[name="number"]').attr("required");
+  const element = document.createElement("script");
+  element.src = "./js/inputmask.min.js";
+  element.type = "text/javascript";
   document.head.appendChild(element);
 
-  element.addEventListener('load', (evt) => {
+  element.addEventListener("load", evt => {
     var im = new Inputmask({
       mask: "+7(999)999-99-99",
       clearIncomplete: true
     });
     console.log();
-    
+
     im.mask(document.querySelectorAll('input[name="number"]'));
-  })
+  });
 }

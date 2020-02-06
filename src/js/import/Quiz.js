@@ -1,3 +1,7 @@
+<TODO>
+  remove comments
+</TODO>
+
 import $ from "jquery";
 
 class Quiz {
@@ -16,11 +20,12 @@ class Quiz {
     this.blocks = this.rootNode.find(".q-block");
     this.quizForm = this.rootNode.find(".q-form");
     
-    this.currStep = 0;
+    this.currStep = 0; // 0
     this.testLength = 3;
     this.timeoutID = null;
     
     this.run();
+    // this.finalizeTest();
   }
 
 
@@ -43,7 +48,7 @@ class Quiz {
 
   formSubmitHandler() {
     this.quizForm.submit((evt) => {
-      ym(57143464, 'reachGoal', 'QUIZ_FORM_SUMBITTED');
+      // ym(57143464, 'reachGoal', 'QUIZ_FORM_SUMBITTED');
     })
   }
   
@@ -58,15 +63,15 @@ class Quiz {
     this.currStep++;
     this.timeoutID = null;
 
-    if (this.currStep === 1) {
-      ym(57143464, 'reachGoal', 'QUIZ_STEP_2_ACHIEVED');
-    } else {
-      switch (this.currStep) {
-        case 2: ym(57143464, 'reachGoal', 'QUIZ_STEP_3_ACHIEVED'); break;
-        case 3: ym(57143464, 'reachGoal', 'QUIZ_STEP_4_ACHIEVED'); break;
-        case 4: ym(57143464, 'reachGoal', 'QUIZ_LAST_STEP_ACHIEVED'); break;
-      }
-    }
+    // if (this.currStep === 1) {
+    //   ym(57143464, 'reachGoal', 'QUIZ_STEP_2_ACHIEVED');
+    // } else {
+    //   switch (this.currStep) {
+    //     case 2: ym(57143464, 'reachGoal', 'QUIZ_STEP_3_ACHIEVED'); break;
+    //     case 3: ym(57143464, 'reachGoal', 'QUIZ_STEP_4_ACHIEVED'); break;
+    //     case 4: ym(57143464, 'reachGoal', 'QUIZ_LAST_STEP_ACHIEVED'); break;
+    //   }
+    // }
     
     if (this.currStep > this.testLength) {
       this.updateStepScale(this.currStep);
@@ -144,6 +149,7 @@ class Quiz {
     $('.quiz__main-block').css('margin-right', '0');
     this.rootNode.find('.quiz__right-block').hide();
     this.rootNode.find('.quiz__controls').hide();
+    this.rootNode.find('.quiz__progress').css('maxWidth', 'none');
     this.finalBlock.show();
   }
 }

@@ -1,10 +1,15 @@
 .q-last-block {
-  max-width: 607px;
-  margin: 0 auto;
+  // max-width: 575px;
+  position: relative;
   display: none;
+  padding-right: (367/916)*100%;
+
+  @media (max-width: 1110px) {
+    padding-right: 0;
+  }
 
   &__title {
-    text-align: center;
+    // text-align: center;
     font-family: "UniNeueBold", sans-serif;
     font-size: 26px;
     line-height: 36px;
@@ -219,5 +224,30 @@
     b {
       font-family: "UniNeueHeavy", sans-serif;
     }
+  }
+
+  &__pic-block {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-56%);
+    width: 350px;
+
+    @media (max-width: 1110px) {
+      display: none;
+    }
+  }
+
+  &__pic {
+    position: relative;
+    
+    padding-top: (576/367)*100%;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 }

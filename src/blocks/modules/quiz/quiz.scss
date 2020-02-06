@@ -36,7 +36,7 @@
     box-shadow: 0 0 15px 0 rgba(30, 54, 94, 0.15);
     margin-right: 20px;
     flex: 1 1 768px;
-    padding: 74px 80px 20px;
+    padding: 64px 64px 20px;
 
     @include breakpoint(contSize) {
       margin-right: 0;
@@ -86,10 +86,10 @@
   }
 
   &__progress {
-    max-width: 607px;
+    max-width: 480px;
     margin: 0 auto;
 
-    @media (max-width: 765px) {
+    @media (max-width: 1110px) {
       max-width: none;
       display: flex;
       justify-content: center;

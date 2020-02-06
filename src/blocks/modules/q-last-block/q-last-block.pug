@@ -3,7 +3,7 @@ include ../../components/blue-btn/blue-quiz-btn
 include ../../components/accept/accept
 
 .q-last-block
-  .q-last-block__title Как Вам удобнее получить консультацию?
+  .q-last-block__title Как вам удобнее получить план действий и консультацию от адвоката Юлии Ковалевой?
   .q-last-block__questions
     input(checked type="radio" id="lb-q1" name="Как Вам удобнее получить консультацию?" value="По телефону").q-last-block__input
     label(for="lb-q1").q-last-block__label
@@ -30,7 +30,7 @@ include ../../components/accept/accept
           span.blue-btn__top-text Узнать стоимость<br />и получить консультацию
   .q-last-block__accept
     +accept('lb-accept-rules')
-  .q-last-block__final-row
-    .q-last-block__sheld
-      +icon('shield')
-    p.q-last-block__low-text В результате бесплатной консультации с юристом <b>Вы получите<br />план самостоятельных действий и узнаете точную стоимость ведения дела</b>
+  .q-last-block__pic-block
+    picture.q-last-block__pic
+      source(srcset="", data-srcset="img/general/quiz-lb-pic.webp" type="image/webp")
+      img(src="img/general/empty.png" data-src="img/general/quiz-lb-pic.png" alt="Чат").q-last-block__img

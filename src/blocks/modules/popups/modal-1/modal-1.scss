@@ -37,9 +37,19 @@
 
   &__header {
     margin-bottom: 14px;
+    max-width: 600px;
+    // font-size: 22px !important;
+    // line-height: 120% !important;
+
+    @media (max-width: 920px) {
+      // br {display: none;}
+    }
 
     @include breakpoint(mobile-l) {
       margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
     }
   }
 
@@ -115,5 +125,23 @@
       right: initial;
       left: calc(50% - 10px);
     }
+  }
+}
+
+.modal-1-phone__header {
+  margin-bottom: 14px;
+  max-width: 600px;
+  font-size: 22px !important;
+  line-height: 120% !important;
+
+  @media (max-width: 920px) {
+    br {display: none;}
+  }
+
+  @include breakpoint(mobile-l) {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
   }
 }
