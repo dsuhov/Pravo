@@ -6,12 +6,12 @@ include ../../components/experience-item/experience-item
 - var exp_imgPath_png = 'img/general/folder_desktop.png';
 - var imgPlaceholder = 'data:image/gif;base64,R0lGODlhSgLyAYAAAP///wAAACH5BAEAAAEALAAAAABKAvIBAAL+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8b+jRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYQLGz6MOLHixYwbO34MObLkyZQrW76MObPmzZw7e/4MOrTo0aRLmz6NOrXq1axbu34NO7bs2bRr276NO7fu3bx7+/4NPLjw4cSLGz+OPLny5cybO38OPbr06dSrW7+OPbv27dy7e/8OPrz48eTLmz+PPr369ezbu38PP778+fTr27+PP7/+/fz++/v/D2CAAg5IYIEGHohgggouyGCDDj4IYYQSTkhhhRZeiGGGGm7IYYcefghiiCKOSGKJJp6IYooqrshiiy6+CGOMMs5IY4023ohjjjruyGOPPv4IZJBCDklkkUYeiWSSSi7JZJNOPglllFJOSWWVVl6JZZZabslll15+CWaYYo5JZplmnolmmmquyWabbr4JZ5xyzklnnXbeiWeeeu7JZ59+/glooIIOSmihhh6KaKKKLspoo44+Cmmkkk5KaaWWXopppppuymmnnn4Kaqiijkpqqaaeimqqqq7KaquuvgprrLLOSmuttt6Ka6667sprr77+Cmywwg5LbLHGHotIbLLKLstss84+C2200k5LbbXWXottttpuy2233n4Lbrjijktuueaei2666q7LbrvuvgtvvPLOS2+99t6Lb7767stvv/7+61YBADs=';
 
-- var expItem_1 = {text: 'Справедливый раздел совместно нажитого имущества', years: '37 дел'};
-- var expItem_2 = {text: 'Взыскание алиментов, изменение размера', years: '22 дела'};
-- var expItem_3 = {text: 'Определение места жительства ребенка', years: '42 дела'};
-- var expItem_4 = {text: 'Установление или оспаривание отцовства', years: '16 дел'};
-- var expItem_5 = {text: 'Лишение и восстановление родительстких прав', years: '12 дел'};
-- var expItem_6 = {text: 'Определение порядка общения с ребенком', years: '41 дело'};
+- var expItem_1 = {text: 'Справедливый раздел совместно нажитого имущества', years: '37 дел', dataText: 'Узнайте как мы добьемся справедливого раздела имущества от адвоката Инны'};
+- var expItem_2 = {text: 'Взыскание алиментов, изменение размера', years: '22 дела', dataText: 'Узнайте как мы добьемся взыскания алиментов с супруга от адвоката Инны'};
+- var expItem_3 = {text: 'Определение места жительства ребенка', years: '42 дела', dataText: 'Узнайте как мы добьемся, чтобы ребенок жил Вами от адвоката Инны'};
+- var expItem_4 = {text: 'Установление или оспаривание отцовства', years: '16 дел', dataText: 'Узнайте как мы установим или оспорим отцовство от адвоката Инны'};
+- var expItem_5 = {text: 'Лишение и восстановление родительстких прав', years: '12 дел', dataText: 'Узнайте как мы лишим или восстановим родительские права от адвоката Инны'};
+- var expItem_6 = {text: 'Определение порядка общения с ребенком', years: '41 дело', dataText: 'Узнайте как мы добьемся справедливого порядка общения с ребенком от адвоката Инны'};
 
 .s-experience
   .container
@@ -21,19 +21,17 @@ include ../../components/experience-item/experience-item
       +sect-subheader('Выложимся на 100% и добьемся лучшего для Вас решения')
     .s-experience__cols
       .s-experience__col.s-experience__lcol
-        +experience-item(expItem_1.text, expItem_1.years, 's-experience')
-        +experience-item(expItem_2.text, expItem_2.years, 's-experience')
-        +experience-item(expItem_3.text, expItem_3.years, 's-experience')
+        +experience-item(expItem_1.text, expItem_1.years, 's-experience', expItem_1.dataText, 'propertyDivision')
+        +experience-item(expItem_2.text, expItem_2.years, 's-experience', expItem_2.dataText, 'alimonyCollection')
+        +experience-item(expItem_3.text, expItem_3.years, 's-experience', expItem_3.dataText, 'residencePlace')
       .s-experience__col.s-experience__center-col
         .s-experience__decor-cont
           picture.s-experience__picture
-            //- source(srcset="img/general/empty.png" media="(max-width: 768px)" type="image/webp")
-            //- source(srcset="img/general/empty.png" media="(max-width: 768px)" type="image/jpg")
             source(srcset=`${imgPlaceholder}`, data-srcset=`${exp_imgPath_webp}` type="image/webp")
             img.s-experience__img(src=`${imgPlaceholder}` data-src=`${exp_imgPath_png}` alt="Деловая практика")
           .s-experience__rounds
             .s-experience__rounds-inner
       .s-experience__col.s-experience__rcol
-        +experience-item(expItem_4.text, expItem_4.years, 's-experience')
-        +experience-item(expItem_5.text, expItem_5.years, 's-experience')
-        +experience-item(expItem_6.text, expItem_6.years, 's-experience')
+        +experience-item(expItem_4.text, expItem_4.years, 's-experience', expItem_4.dataText, 'contestingPaternity')
+        +experience-item(expItem_5.text, expItem_5.years, 's-experience', expItem_5.dataText, 'parentalRights')
+        +experience-item(expItem_6.text, expItem_6.years, 's-experience', expItem_6.dataText, 'communicationOrder')

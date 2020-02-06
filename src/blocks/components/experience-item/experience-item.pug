@@ -1,5 +1,5 @@
-mixin experience-item(expCase, expDuration, extraClass)
-  .experience-item(class=`${extraClass}__experience-item`)
+mixin experience-item(expCase, expDuration, extraClass, dataText, ymId)
+  .experience-item(class=`${extraClass}__experience-item` data-popup-text=""+dataText data-ymid=""+ymId)
     .experience-item__inner
       h3.experience-item__circumscribing #{expCase}
       .experience-item__practice Практический опыт: 

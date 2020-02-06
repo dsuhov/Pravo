@@ -33,6 +33,8 @@ new LazyLoad();
 document.addEventListener('DOMContentLoaded', () => {
   ymGoals();
   phoneBtnActions();
+  expItemsActions();
+  phoneFieldCheck();
 });
 
 function ymGoals() {
@@ -209,6 +211,89 @@ function phoneBtnActions() {
   if (window.matchMedia('(min-width: 769px)').matches) {
     phoneBtns.forEach(el => {
       el.addEventListener('click', phoneBtnHandler);
+      // el.addEventListener('touchend', phoneBtnHandler);
+    });
+  }
+}
+
+function expItemsActions() {
+  const items = Array.from(document.querySelectorAll('.experience-item'));
+  const popup = document.getElementById('modal-1-expItem');
+  const ymbase = '';
+
+  const expItemhandler = evt => {
+    let currentTarget = evt.target;
+    let currText = '';
+    let ymId = '';
+
+    // get form data element
+    const formElement = popup.querySelector('form');
+
+    const formElSubmitHandler = e => {
+      e.preventDefault();
+      ym(57143464, 'reachGoal', ymId + '_SEND');
+      formElement.removeEventListener('submit', formElSubmitHandler);
+      e.target.submit();
+    }
+
+    // set submit event
+    formElement.addEventListener('submit', formElSubmitHandler);
+
+    // clicked element proof
+    if (!evt.target.classList.contains('experience-item')) {
+      currentTarget = evt.target.closest('.experience-item');
+    }
+    
+    // set current text and yandex id
+    currText = currentTarget.dataset.popupText;
+    ymId = currentTarget.dataset.ymid;
+
+    // set new header for popup
+    popup.querySelector('.expItem_header').innerText = currText;
+
+    // open popup
+    $.magnificPopup.open({
+      items: {
+        src: popup
+      },
+      type: "inline",
+      closeBtnInside: false
+    });
+
+    ym(57143464, 'reachGoal', ymId + '_OPENED');
+  }
+
+  items.forEach(el => el.addEventListener('click', expItemhandler))
+
+}
+
+function phoneFieldCheck() {
+  const regex = /\d+/g;
+
+  const inputs = document.querySelectorAll('input[name="number"]');
+
+  [...inputs].forEach(el => el.addEventListener('blur', inputBlurHandler));
+
+  function inputBlurHandler(evt) {
+    const inputEl = evt.target;
+    
+    if (inputEl.value.length !== 16 || isSameNumbers(inputEl.value)) {
+      inputEl.setCustomValidity('Неверный формат номера!');
+    } else {
+      inputEl.setCustomValidity('');
+    }
+  }
+
+  function isSameNumbers(num) {
+    const digits = num.match(regex).slice(1).join('');
+
+    return digits.split('').every((el, i, arr) => {
+      
+      if (i > 0) {
+        return arr[i-1] === el;
+      } else {
+        return true;
+      }
     });
   }
 }

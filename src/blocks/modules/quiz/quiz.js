@@ -9,9 +9,7 @@ $(document).ready(function() {
   }
 
   if (document.querySelector("#quiz2")) {
-
     const quizMain2 = new Quiz("#quiz2");
-    console.log(document.querySelector("#quiz2"));
   }
   
 });
